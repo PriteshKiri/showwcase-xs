@@ -5,3 +5,9 @@
 .app {
   color: black;
 }
+
+.mycenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
