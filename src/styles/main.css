@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 .app {
-  color: black;
+  color: rgb(254, 254, 254);
 }
 
 .mycenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  color: white !important;
 }
