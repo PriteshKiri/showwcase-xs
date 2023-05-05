@@ -5,7 +5,7 @@ function App() {
   const openSidebar = () => {
     setOpen(!open);
   };
-  // test name
+
   return (
     <div className="flex  z-[9999999] fixed right-0 top-0 h-[100vh] app">
       <div className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[260px] rounded-l-lg flex flex-col items-center justify-around gap-1 border-r-[1px] border-slate-600">
