@@ -1,11 +1,11 @@
-import Layout from "./components/Layout";
+import { Layout } from "./Layouts/Layout";
+import Main from "./Main";
 
-function App() {
+function App(props: any) {
+  console.log(props, "prop from layout");
   return (
     <Layout>
-      <main>
-        <h1>This is the main content</h1>
-      </main>
+      <Main />
     </Layout>
   );
 }

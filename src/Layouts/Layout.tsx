@@ -1,15 +1,17 @@
-import { useState } from "react";
-import NavIconWrapper from ".//NavIconWrapper";
+import React, { createContext, useState } from "react";
+import NavIconWrapper from "../components/NavIconWrapper";
+const TabContext = createContext(undefined);
 
 const Layout = ({ children }: any) => {
   const [open, setOpen] = useState(false);
+  const [tab, setTab]: any = useState("notification");
   const openSidebar = () => {
     setOpen(!open);
   };
 
   return (
-    <div className="flex  z-[9999999] fixed right-0 top-0 h-[100vh] app">
-      <div className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-lg flex flex-col items-center justify-around gap-1 ">
+    <div className={`flex  z-[9999999] fixed right-0 top-0 h-[100vh] app  `}>
+      <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-lg flex flex-col items-center justify-around gap-1 ">
         {/* Sidebar opener arrow */}
         <div
           className="w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md cursor-pointer border-[1px] hover:border-white"
@@ -54,9 +56,10 @@ const Layout = ({ children }: any) => {
           )}
         </div>
 
-        {/* Notifications */}
+        {/* Notification */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("notification")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-bell w-[20px] h-[20px] "
             width="44"
@@ -74,9 +77,10 @@ const Layout = ({ children }: any) => {
           </svg>
         </NavIconWrapper>
 
-        {/* User */}
+        {/* Profile */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("profile")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-user w-[20px] h-[20px] "
             width="44"
@@ -93,9 +97,10 @@ const Layout = ({ children }: any) => {
             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
           </svg>
         </NavIconWrapper>
-        {/* feeds */}
+        {/* Feed */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("feed")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-rss w-[20px] h-[20px] "
             width="44"
@@ -113,9 +118,10 @@ const Layout = ({ children }: any) => {
             <path d="M4 11a9 9 0 0 1 9 9" />
           </svg>
         </NavIconWrapper>
-        {/* Roadmaps */}
+        {/* Roadmap */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("roadmap")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-route  w-[20px] h-[20px]"
             width="44"
@@ -136,7 +142,9 @@ const Layout = ({ children }: any) => {
         {/* Series */}
         <NavIconWrapper>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setTab("series")}
+            xmlns="http://ww
+            w.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-stack-2 w-[20px] h-[20px]"
             width="44"
             height="44"
@@ -154,9 +162,10 @@ const Layout = ({ children }: any) => {
           </svg>
         </NavIconWrapper>
 
-        {/* shows */}
+        {/* Show */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("show")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-book w-[20px] h-[20px] "
             width="44"
@@ -176,9 +185,10 @@ const Layout = ({ children }: any) => {
             <line x1="21" y1="6" x2="21" y2="19" />
           </svg>
         </NavIconWrapper>
-        {/* Communites */}
+        {/* Community */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("community")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-social w-[20px] h-[20px] "
             width="44"
@@ -200,9 +210,10 @@ const Layout = ({ children }: any) => {
             <line x1="17.3" y1="17.8" x2="14.5" y2="15.8" />
           </svg>
         </NavIconWrapper>
-        {/* Bookmarks */}
+        {/* Bookmark */}
         <NavIconWrapper>
           <svg
+            onClick={() => setTab("bookmark")}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-bookmarks w-[20px] h-[20px] "
             width="44"
@@ -219,13 +230,13 @@ const Layout = ({ children }: any) => {
             <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
           </svg>
         </NavIconWrapper>
-      </div>
+      </nav>
       <div
-        className={`bg-black border-l-[1px] border-[#202021]  transition-all ${
-          open ? "w-[400px]" : "w-[0px]"
+        className={`bg-black transition-all ${
+          open ? "w-[400px] bdr-l " : "w-[0px] bdr-l "
         } `}
       >
-        <header className="h-[50px] w-full flex items-center justify-between bg-grey px-3 border-b-[1px] border-[#202021]">
+        <header className="h-[50px] w-full flex items-center justify-between bg-grey px-3 bdr-b">
           <img
             src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683317102/showwcasexs/showwcaseXS_efwweq.png"
             alt="ShowwcaseXS header logo"
@@ -239,12 +250,18 @@ const Layout = ({ children }: any) => {
             className="w-[30px] h-[30px] rounded-full"
           />
         </header>
-        {children}
+        <TabContext.Provider value={tab}>{children}</TabContext.Provider>
+
         {open && (
-          <footer className="h-[30px] w-full text-white mycenter bg-grey px-3 border-t-[1px] border-[#202021] absolute bottom-0 right-0">
+          <footer
+            className={`h-[30px] w-full text-white mycenter bg-grey px-3 bdr-t absolute bottom-0 right-0 `}
+          >
             <small className="">
               Made with &lt; 🧠 /&gt; by{" "}
-              <a href="https://twitter.com/PriteshKiri" className="text-white">
+              <a
+                href="https://twitter.com/PriteshKiri"
+                className="text-white link"
+              >
                 Pritesh Kiri
               </a>
             </small>
@@ -255,4 +272,4 @@ const Layout = ({ children }: any) => {
   );
 };
 
-export default Layout;
+export { Layout, TabContext };
