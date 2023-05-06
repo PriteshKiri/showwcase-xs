@@ -3,14 +3,16 @@ import NavIconWrapper from "../components/NavIconWrapper";
 const TabContext = createContext(undefined);
 
 const Layout = ({ children }: any) => {
-  const [open, setOpen] = useState(false);
-  const [tab, setTab]: any = useState("notification");
+  const [open, setOpen] = useState(true);
+  const [tab, setTab]: any = useState("feed");
   const openSidebar = () => {
     setOpen(!open);
   };
 
   return (
-    <div className={`flex  z-[9999999] fixed right-0 top-0 h-[100vh] app  `}>
+    <div
+      className={` font-sans flex  z-[9999999] fixed right-0 top-0 h-[100vh] app  `}
+    >
       <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-lg flex flex-col items-center justify-around gap-1 ">
         {/* Sidebar opener arrow */}
         <div
@@ -254,7 +256,7 @@ const Layout = ({ children }: any) => {
 
         {open && (
           <footer
-            className={`h-[30px] w-full text-white mycenter bg-grey px-3 bdr-t absolute bottom-0 right-0 `}
+            className={`h-[30px] w-full text-white mycenter bg-grey px-3 bdr-t absolute bottom-0 right-0 bg-black `}
           >
             <small className="">
               Made with &lt; 🧠 /&gt; by{" "}
