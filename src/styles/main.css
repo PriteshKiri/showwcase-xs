@@ -12,6 +12,26 @@
   align-items: center;
 }
 
-a {
+.link {
   color: white !important;
+}
+
+.bdr-b {
+  border-bottom: 1px solid #313131;
+}
+
+.bdr-t {
+  border-top: 1px solid #313131;
+}
+
+.bdr-l {
+  border-left: 1px solid #313131;
+}
+
+.bdr-r {
+  border-right: 1px solid #313131;
+}
+
+.bdr-all {
+  border: 1px solid #313131;
 }
