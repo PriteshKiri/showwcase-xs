@@ -17,11 +17,29 @@ const ViewFeed = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center h-[100vh] overflow-y-scroll">
-      {feed &&
+    <div className="flex flex-col items-center h-[80vh] mt-[10px] overflow-y-scroll">
+      {Object.keys(feed).length ? (
         feed.map((thread) => {
           return <ThreadCard props={thread} />;
-        })}
+        })
+      ) : (
+        <p className="text-white">Loading...</p>
+      )}
+
+      {Object.keys(feed).length ? (
+        <div className="py-[15px]">
+          <a
+            href="https://www.showwcase.com/"
+            className="link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View more
+          </a>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

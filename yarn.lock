@@ -1862,6 +1862,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/debug@^4.0.0":
+  version "4.1.7"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/@types/debug/-/debug-4.1.7.tgz"
+  integrity sha1-fMDqdhUJEkcJuLLRCQ2PbBeq24I=
+  dependencies:
+    "@types/ms" "*"
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
   resolved "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.4.tgz"
@@ -1919,6 +1926,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hast@^2.0.0":
+  version "2.3.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/@types/hast/-/hast-2.3.4.tgz"
+  integrity sha1-iqXvksEX0g2XSoK9+2pkiwjAuvw=
+  dependencies:
+    "@types/unist" "*"
+
 "@types/html-minifier-terser@^6.0.0":
   version "6.1.0"
   resolved "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz"
@@ -1968,10 +1982,22 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
+"@types/mdast@^3.0.0":
+  version "3.0.11"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/@types/mdast/-/mdast-3.0.11.tgz"
+  integrity sha1-3BMPfn2TBhJChvbWzuQM9NFKPcA=
+  dependencies:
+    "@types/unist" "*"
+
 "@types/mime@*":
   version "3.0.1"
   resolved "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
   integrity sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==
+
+"@types/ms@*":
+  version "0.7.31"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/@types/ms/-/ms-0.7.31.tgz"
+  integrity sha1-MbfKZAcSij0rvCf+LSGzRTl/YZc=
 
 "@types/node@*", "@types/node@^16.18.3":
   version "16.18.3"
@@ -1988,7 +2014,7 @@
   resolved "https://registry.npmjs.org/@types/prettier/-/prettier-2.7.1.tgz"
   integrity sha512-ri0UmynRRvZiiUJdiz38MmIblKK+oH30MztdBVR95dv/Ubw6neWSb8u1XpRb72L4qsZOhz+L+z9JD40SJmfWow==
 
-"@types/prop-types@*":
+"@types/prop-types@*", "@types/prop-types@^15.0.0":
   version "15.7.5"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
@@ -2015,7 +2041,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.24":
+"@types/react@*", "@types/react@^18.0.24", "@types/react@>=16":
   version "18.0.24"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.24.tgz"
   integrity sha512-wRJWT6ouziGUy+9uX0aW4YOJxAY0bG6/AOk5AW5QSvZqI7dk6VBIbXvcVgIw/W5Jrl24f77df98GEKTJGOLx7Q==
@@ -2084,6 +2110,11 @@
   version "2.0.2"
   resolved "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.2.tgz"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
+
+"@types/unist@*", "@types/unist@^2.0.0":
+  version "2.0.6"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/@types/unist/-/unist-2.0.6.tgz"
+  integrity sha1-JQp7FsO5H2cqJFUuxkZ47rHToI0=
 
 "@types/ws@^8.5.1":
   version "8.5.3"
@@ -2812,6 +2843,11 @@ babel-preset-react-app@^10.0.1:
     babel-plugin-macros "^3.1.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
 
+bail@^2.0.0:
+  version "2.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/bail/-/bail-2.0.2.tgz"
+  integrity sha1-0m9c2P5db4MqMVF7n3w1YEC6bV0=
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
@@ -3000,6 +3036,11 @@ case-sensitive-paths-webpack-plugin@^2.4.0:
   resolved "https://registry.npmjs.org/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz"
   integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
 
+ccount@^2.0.0:
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/ccount/-/ccount-2.0.1.tgz"
+  integrity sha1-F6O/gjAuCHDW2kOgExGovAKj7PU=
+
 chalk@^2.0.0, chalk@^2.4.1:
   version "2.4.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
@@ -3058,6 +3099,11 @@ char-regex@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/char-regex/-/char-regex-2.0.1.tgz"
   integrity sha512-oSvEeo6ZUD7NepqAat3RqoucZ5SeqLJgOvVIwkafu6IP3V0pO38s/ypdVUmDDK6qIIHNlYHJAKX9E7R7HoKElw==
+
+character-entities@^2.0.0:
+  version "2.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/character-entities/-/character-entities-2.0.2.tgz"
+  integrity sha1-LQnC5yzZUjB2zLIRV9/2atQ/zCI=
 
 check-types@^11.1.1:
   version "11.1.2"
@@ -3178,6 +3224,11 @@ combined-stream@^1.0.8:
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
   dependencies:
     delayed-stream "~1.0.0"
+
+comma-separated-tokens@^2.0.0:
+  version "2.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz"
+  integrity sha1-TonJRYrLYbyP7xn0UplzsjkoOe4=
 
 commander@^2.20.0:
   version "2.20.3"
@@ -3587,7 +3638,7 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4, debug@4:
+debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4, debug@4:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -3605,6 +3656,13 @@ decimal.js@^10.2.1:
   version "10.4.2"
   resolved "https://registry.npmjs.org/decimal.js/-/decimal.js-10.4.2.tgz"
   integrity sha512-ic1yEvwT6GuvaYwBLLY6/aFFgjZdySKTE8en/fkU3QICTmRtgtSlFn0u0BXN06InZwtfCelR7j8LRiDI/02iGA==
+
+decode-named-character-reference@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/decode-named-character-reference/-/decode-named-character-reference-1.0.2.tgz"
+  integrity sha1-2quslpCHTDlMgeQWKgMEs12CTw4=
+  dependencies:
+    character-entities "^2.0.0"
 
 dedent@^0.7.0:
   version "0.7.0"
@@ -3677,6 +3735,11 @@ depd@2.0.0:
   resolved "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
 
+dequal@^2.0.0:
+  version "2.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/dequal/-/dequal-2.0.3.tgz"
+  integrity sha1-JkQhTxmX057Q7g7OcjNUkKesZ74=
+
 destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
@@ -3709,6 +3772,11 @@ diff-sequences@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-27.5.1.tgz"
   integrity sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==
+
+diff@^5.0.0:
+  version "5.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/diff/-/diff-5.1.0.tgz"
+  integrity sha1-vFLSmMXqjfkZSAAiREXtQ//IfkA=
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -4014,6 +4082,11 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
+
+escape-string-regexp@^5.0.0:
+  version "5.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz"
+  integrity sha1-RoMSa1ALYXYvLb66zhgG6L4xscg=
 
 escodegen@^2.0.0:
   version "2.0.0"
@@ -4378,6 +4451,11 @@ express@^4.17.3:
     type-is "~1.6.18"
     utils-merge "1.0.1"
     vary "~1.1.2"
+
+extend@^3.0.0:
+  version "3.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/extend/-/extend-3.0.2.tgz"
+  integrity sha1-+LETa0Bx+9jrFAr/hYsQGewpFfo=
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -4850,6 +4928,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hast-util-whitespace@^2.0.0:
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/hast-util-whitespace/-/hast-util-whitespace-2.0.1.tgz"
+  integrity sha1-DsZOJX5vwhbH0UyKG3TSfWULRVc=
+
 he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
@@ -5084,6 +5167,11 @@ ini@^1.3.5:
   resolved "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
+inline-style-parser@0.1.1:
+  version "0.1.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/inline-style-parser/-/inline-style-parser-0.1.1.tgz"
+  integrity sha1-7Io7QpJ06cCh8cT/qUU6f+9yzqE=
+
 internal-slot@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.3.tgz"
@@ -5142,6 +5230,11 @@ is-boolean-object@^1.1.0:
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
+
+is-buffer@^2.0.0:
+  version "2.0.5"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/is-buffer/-/is-buffer-2.0.5.tgz"
+  integrity sha1-68JS5ADSL/jXf6CYiIIaJKZYwZE=
 
 is-callable@^1.1.3, is-callable@^1.1.4, is-callable@^1.2.7:
   version "1.2.7"
@@ -5230,6 +5323,11 @@ is-plain-obj@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-3.0.0.tgz"
   integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
+
+is-plain-obj@^4.0.0:
+  version "4.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/is-plain-obj/-/is-plain-obj-4.1.0.tgz"
+  integrity sha1-1lAl7ew2V84DL9fbY8l4g+rtcfA=
 
 is-plain-object@^2.0.4:
   version "2.0.4"
@@ -6031,6 +6129,11 @@ kleur@^3.0.3:
   resolved "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
+kleur@^4.0.3:
+  version "4.1.5"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/kleur/-/kleur-4.1.5.tgz"
+  integrity sha1-lRBhAXlfcFDGxlDzUMaD/r3bF4A=
+
 klona@^2.0.4, klona@^2.0.5, klona@^2.0.6:
   version "2.0.6"
   resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/klona/-/klona-2.0.6.tgz"
@@ -6150,6 +6253,11 @@ lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+longest-streak@^3.0.0:
+  version "3.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/longest-streak/-/longest-streak-3.1.0.tgz"
+  integrity sha1-YvpnzZWHQqFXSvnzmGY2QQLZDNQ=
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
@@ -6197,6 +6305,149 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
+markdown-table@^3.0.0:
+  version "3.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/markdown-table/-/markdown-table-3.0.3.tgz"
+  integrity sha1-5jMdMOSTEn4DHdOFSItb0ybkpr0=
+
+mdast-util-definitions@^5.0.0:
+  version "5.1.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-definitions/-/mdast-util-definitions-5.1.2.tgz"
+  integrity sha1-mRCrtgrF1xFdaBm1euC87wej96c=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    unist-util-visit "^4.0.0"
+
+mdast-util-find-and-replace@^2.0.0:
+  version "2.2.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-find-and-replace/-/mdast-util-find-and-replace-2.2.2.tgz"
+  integrity sha1-zCt3T382MNpL1ZL2GWb+yt6LmbE=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    escape-string-regexp "^5.0.0"
+    unist-util-is "^5.0.0"
+    unist-util-visit-parents "^5.0.0"
+
+mdast-util-from-markdown@^1.0.0:
+  version "1.3.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-from-markdown/-/mdast-util-from-markdown-1.3.0.tgz"
+  integrity sha1-AhQSQVTyYVSis/nUARVVCb5F6JQ=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    decode-named-character-reference "^1.0.0"
+    mdast-util-to-string "^3.1.0"
+    micromark "^3.0.0"
+    micromark-util-decode-numeric-character-reference "^1.0.0"
+    micromark-util-decode-string "^1.0.0"
+    micromark-util-normalize-identifier "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    unist-util-stringify-position "^3.0.0"
+    uvu "^0.5.0"
+
+mdast-util-gfm-autolink-literal@^1.0.0:
+  version "1.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm-autolink-literal/-/mdast-util-gfm-autolink-literal-1.0.3.tgz"
+  integrity sha1-Z6E6voE9fro1BFOlMzrhvA7AXAY=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    ccount "^2.0.0"
+    mdast-util-find-and-replace "^2.0.0"
+    micromark-util-character "^1.0.0"
+
+mdast-util-gfm-footnote@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm-footnote/-/mdast-util-gfm-footnote-1.0.2.tgz"
+  integrity sha1-zl5JtjnETeaNW/U5mHehTVAgQk4=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-to-markdown "^1.3.0"
+    micromark-util-normalize-identifier "^1.0.0"
+
+mdast-util-gfm-strikethrough@^1.0.0:
+  version "1.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm-strikethrough/-/mdast-util-gfm-strikethrough-1.0.3.tgz"
+  integrity sha1-VHDrEFtIP3dGuIBbm5iTQghXlbc=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-to-markdown "^1.3.0"
+
+mdast-util-gfm-table@^1.0.0:
+  version "1.0.7"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm-table/-/mdast-util-gfm-table-1.0.7.tgz"
+  integrity sha1-NVIVOhRjefD5xMEQGwcdcLvtGkY=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    markdown-table "^3.0.0"
+    mdast-util-from-markdown "^1.0.0"
+    mdast-util-to-markdown "^1.3.0"
+
+mdast-util-gfm-task-list-item@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm-task-list-item/-/mdast-util-gfm-task-list-item-1.0.2.tgz"
+  integrity sha1-soD887e+b9DMASu+Z6WYMes0CXs=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-to-markdown "^1.3.0"
+
+mdast-util-gfm@^2.0.0:
+  version "2.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-gfm/-/mdast-util-gfm-2.0.2.tgz"
+  integrity sha1-6S9NhxfXS9um3lftIcyLlVLi0LY=
+  dependencies:
+    mdast-util-from-markdown "^1.0.0"
+    mdast-util-gfm-autolink-literal "^1.0.0"
+    mdast-util-gfm-footnote "^1.0.0"
+    mdast-util-gfm-strikethrough "^1.0.0"
+    mdast-util-gfm-table "^1.0.0"
+    mdast-util-gfm-task-list-item "^1.0.0"
+    mdast-util-to-markdown "^1.0.0"
+
+mdast-util-phrasing@^3.0.0:
+  version "3.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-phrasing/-/mdast-util-phrasing-3.0.1.tgz"
+  integrity sha1-x8IdDUNdf7kJVgOPAuhwJ4H5VGM=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    unist-util-is "^5.0.0"
+
+mdast-util-to-hast@^12.1.0:
+  version "12.3.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-to-hast/-/mdast-util-to-hast-12.3.0.tgz"
+  integrity sha1-BF0oJfsEN05Zlw9bPyebVwD2+0k=
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/mdast" "^3.0.0"
+    mdast-util-definitions "^5.0.0"
+    micromark-util-sanitize-uri "^1.1.0"
+    trim-lines "^3.0.0"
+    unist-util-generated "^2.0.0"
+    unist-util-position "^4.0.0"
+    unist-util-visit "^4.0.0"
+
+mdast-util-to-markdown@^1.0.0, mdast-util-to-markdown@^1.3.0:
+  version "1.5.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-to-markdown/-/mdast-util-to-markdown-1.5.0.tgz"
+  integrity sha1-wTNDyz/JhiGRHTO1zULn0HMRccY=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    longest-streak "^3.0.0"
+    mdast-util-phrasing "^3.0.0"
+    mdast-util-to-string "^3.0.0"
+    micromark-util-decode-string "^1.0.0"
+    unist-util-visit "^4.0.0"
+    zwitch "^2.0.0"
+
+mdast-util-to-string@^3.0.0, mdast-util-to-string@^3.1.0:
+  version "3.2.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mdast-util-to-string/-/mdast-util-to-string-3.2.0.tgz"
+  integrity sha1-Zve7YyR1Z0HF9HpTVX8Mvxa294k=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+
 mdn-data@2.0.14:
   version "2.0.14"
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz"
@@ -6238,6 +6489,280 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/methods/-/methods-1.1.2.tgz"
   integrity sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==
+
+micromark-core-commonmark@^1.0.0, micromark-core-commonmark@^1.0.1:
+  version "1.0.6"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-core-commonmark/-/micromark-core-commonmark-1.0.6.tgz"
+  integrity sha1-7f9McuWZPZNySjwgaXD1oVsFha0=
+  dependencies:
+    decode-named-character-reference "^1.0.0"
+    micromark-factory-destination "^1.0.0"
+    micromark-factory-label "^1.0.0"
+    micromark-factory-space "^1.0.0"
+    micromark-factory-title "^1.0.0"
+    micromark-factory-whitespace "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-chunked "^1.0.0"
+    micromark-util-classify-character "^1.0.0"
+    micromark-util-html-tag-name "^1.0.0"
+    micromark-util-normalize-identifier "^1.0.0"
+    micromark-util-resolve-all "^1.0.0"
+    micromark-util-subtokenize "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.1"
+    uvu "^0.5.0"
+
+micromark-extension-gfm-autolink-literal@^1.0.0:
+  version "1.0.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-autolink-literal/-/micromark-extension-gfm-autolink-literal-1.0.4.tgz"
+  integrity sha1-Oor0gmS+RxOGVKsLhwCo4ieF7wc=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-sanitize-uri "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-extension-gfm-footnote@^1.0.0:
+  version "1.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-footnote/-/micromark-extension-gfm-footnote-1.1.0.tgz"
+  integrity sha1-c+Pbgj253v7yX2gHTLTPS7nPaow=
+  dependencies:
+    micromark-core-commonmark "^1.0.0"
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-normalize-identifier "^1.0.0"
+    micromark-util-sanitize-uri "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-extension-gfm-strikethrough@^1.0.0:
+  version "1.0.5"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-1.0.5.tgz"
+  integrity sha1-TbQLh9Z0pv4dANWayREY5PWWDxI=
+  dependencies:
+    micromark-util-chunked "^1.0.0"
+    micromark-util-classify-character "^1.0.0"
+    micromark-util-resolve-all "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-extension-gfm-table@^1.0.0:
+  version "1.0.5"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-table/-/micromark-extension-gfm-table-1.0.5.tgz"
+  integrity sha1-e3CLco+NxNldSGueeiJi+c3by7Q=
+  dependencies:
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-extension-gfm-tagfilter@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-1.0.2.tgz"
+  integrity sha1-qnxN2S2rvLgPMT66qo6z2sBfE6c=
+  dependencies:
+    micromark-util-types "^1.0.0"
+
+micromark-extension-gfm-task-list-item@^1.0.0:
+  version "1.0.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-1.0.4.tgz"
+  integrity sha1-S2bYeEfeQM7ytc7duflimm3+dHI=
+  dependencies:
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-extension-gfm@^2.0.0:
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-extension-gfm/-/micromark-extension-gfm-2.0.1.tgz"
+  integrity sha1-QPMgkhYSepYpfFTGf17cfvLRoqI=
+  dependencies:
+    micromark-extension-gfm-autolink-literal "^1.0.0"
+    micromark-extension-gfm-footnote "^1.0.0"
+    micromark-extension-gfm-strikethrough "^1.0.0"
+    micromark-extension-gfm-table "^1.0.0"
+    micromark-extension-gfm-tagfilter "^1.0.0"
+    micromark-extension-gfm-task-list-item "^1.0.0"
+    micromark-util-combine-extensions "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-factory-destination@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-factory-destination/-/micromark-factory-destination-1.0.0.tgz"
+  integrity sha1-/vHLWa1Jl8SW+Ie2l3qjA0paJ34=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-factory-label@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-factory-label/-/micromark-factory-label-1.0.2.tgz"
+  integrity sha1-a+JVH6jRNUL8u6xHglj7eiAEcTc=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-factory-space@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-factory-space/-/micromark-factory-space-1.0.0.tgz"
+  integrity sha1-zr/0mWjyuWFsD8sjnpZoXLlJdjM=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-factory-title@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-factory-title/-/micromark-factory-title-1.0.2.tgz"
+  integrity sha1-fgkofDdI/xaTkw8XbhxKMoOCSU8=
+  dependencies:
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-factory-whitespace@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-factory-whitespace/-/micromark-factory-whitespace-1.0.0.tgz"
+  integrity sha1-6ZHgQ603bBulL05JhYzgeUZ4Yhw=
+  dependencies:
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-util-character@^1.0.0:
+  version "1.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-character/-/micromark-util-character-1.1.0.tgz"
+  integrity sha1-2XxU1XQqDZYRpoygzUEkMx8mTYY=
+  dependencies:
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-util-chunked@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-chunked/-/micromark-util-chunked-1.0.0.tgz"
+  integrity sha1-W0DYPz1TuExMa84w7UJX6aTHnQY=
+  dependencies:
+    micromark-util-symbol "^1.0.0"
+
+micromark-util-classify-character@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-classify-character/-/micromark-util-classify-character-1.0.0.tgz"
+  integrity sha1-y9e0R8t57mmX3SdKRvxOuAZGCiA=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-util-combine-extensions@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-combine-extensions/-/micromark-util-combine-extensions-1.0.0.tgz"
+  integrity sha1-kUGOHnT7iT42KLjUlghWORJP89U=
+  dependencies:
+    micromark-util-chunked "^1.0.0"
+    micromark-util-types "^1.0.0"
+
+micromark-util-decode-numeric-character-reference@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-decode-numeric-character-reference/-/micromark-util-decode-numeric-character-reference-1.0.0.tgz"
+  integrity sha1-3MhfE7W9k/+NKGjD26KAOdSQuUY=
+  dependencies:
+    micromark-util-symbol "^1.0.0"
+
+micromark-util-decode-string@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-decode-string/-/micromark-util-decode-string-1.0.2.tgz"
+  integrity sha1-lCJSq3p23sLb8InMMlBe4rw6zwI=
+  dependencies:
+    decode-named-character-reference "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-decode-numeric-character-reference "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+
+micromark-util-encode@^1.0.0:
+  version "1.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-encode/-/micromark-util-encode-1.0.1.tgz"
+  integrity sha1-LBwi04AIcK13Ds5WhuvKWSA1M4M=
+
+micromark-util-html-tag-name@^1.0.0:
+  version "1.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-html-tag-name/-/micromark-util-html-tag-name-1.1.0.tgz"
+  integrity sha1-6yJxGL79UfSIWOh5t6QZ/A3yBJc=
+
+micromark-util-normalize-identifier@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-normalize-identifier/-/micromark-util-normalize-identifier-1.0.0.tgz"
+  integrity sha1-SjU5y425VLvsUgOVK/6M7a2ueCg=
+  dependencies:
+    micromark-util-symbol "^1.0.0"
+
+micromark-util-resolve-all@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-resolve-all/-/micromark-util-resolve-all-1.0.0.tgz"
+  integrity sha1-p8Nj9JoBYukxlgxE8xJ6tY8DHYg=
+  dependencies:
+    micromark-util-types "^1.0.0"
+
+micromark-util-sanitize-uri@^1.0.0, micromark-util-sanitize-uri@^1.1.0:
+  version "1.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-sanitize-uri/-/micromark-util-sanitize-uri-1.1.0.tgz"
+  integrity sha1-8S4HqFEGuQJkXgNk/rB88lOoWu4=
+  dependencies:
+    micromark-util-character "^1.0.0"
+    micromark-util-encode "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+
+micromark-util-subtokenize@^1.0.0:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-subtokenize/-/micromark-util-subtokenize-1.0.2.tgz"
+  integrity sha1-/28a9qyDb4v9v5sC9AQxdgrYkQU=
+  dependencies:
+    micromark-util-chunked "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.0"
+    uvu "^0.5.0"
+
+micromark-util-symbol@^1.0.0:
+  version "1.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-symbol/-/micromark-util-symbol-1.0.1.tgz"
+  integrity sha1-uQNE22IELORU81HPC+vMCm2kkg4=
+
+micromark-util-types@^1.0.0, micromark-util-types@^1.0.1:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark-util-types/-/micromark-util-types-1.0.2.tgz"
+  integrity sha1-9CIP2zGSBYEvmcQPjIepvoPt7SA=
+
+micromark@^3.0.0:
+  version "3.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/micromark/-/micromark-3.1.0.tgz"
+  integrity sha1-7roP4Kwcmq72dRV7UsFm8SXon2I=
+  dependencies:
+    "@types/debug" "^4.0.0"
+    debug "^4.0.0"
+    decode-named-character-reference "^1.0.0"
+    micromark-core-commonmark "^1.0.1"
+    micromark-factory-space "^1.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-chunked "^1.0.0"
+    micromark-util-combine-extensions "^1.0.0"
+    micromark-util-decode-numeric-character-reference "^1.0.0"
+    micromark-util-encode "^1.0.0"
+    micromark-util-normalize-identifier "^1.0.0"
+    micromark-util-resolve-all "^1.0.0"
+    micromark-util-sanitize-uri "^1.0.0"
+    micromark-util-subtokenize "^1.0.0"
+    micromark-util-symbol "^1.0.0"
+    micromark-util-types "^1.0.1"
+    uvu "^0.5.0"
 
 micromatch@^4.0.0, micromatch@^4.0.2, micromatch@^4.0.4, micromatch@^4.0.5:
   version "4.0.5"
@@ -6311,6 +6836,11 @@ mkdirp@~0.5.1:
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
   dependencies:
     minimist "^1.2.6"
+
+mri@^1.1.0:
+  version "1.2.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/mri/-/mri-1.2.0.tgz"
+  integrity sha1-ZyFID+wqEaSImGERWki2y+fMjws=
 
 ms@^2.1.1, ms@2.1.2:
   version "2.1.2"
@@ -7381,7 +7911,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.0.0, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7389,6 +7919,11 @@ prop-types@^15.8.1:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.13.1"
+
+property-information@^6.0.0:
+  version "6.2.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/property-information/-/property-information-6.2.0.tgz"
+  integrity sha1-t09SLDHAl7UUnjw8uNfz3v2Yah0=
 
 proxy-addr@~2.0.7:
   version "2.0.7"
@@ -7529,6 +8064,27 @@ react-is@^18.0.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-markdown@^8.0.7:
+  version "8.0.7"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/react-markdown/-/react-markdown-8.0.7.tgz"
+  integrity sha1-yNvRubpfHF5+XypE3kZaPKr9+Js=
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/prop-types" "^15.0.0"
+    "@types/unist" "^2.0.0"
+    comma-separated-tokens "^2.0.0"
+    hast-util-whitespace "^2.0.0"
+    prop-types "^15.0.0"
+    property-information "^6.0.0"
+    react-is "^18.0.0"
+    remark-parse "^10.0.0"
+    remark-rehype "^10.0.0"
+    space-separated-tokens "^2.0.0"
+    style-to-object "^0.4.0"
+    unified "^10.0.0"
+    unist-util-visit "^4.0.0"
+    vfile "^5.0.0"
+
 react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   version "0.11.0"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
@@ -7589,7 +8145,7 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react@^18.0.0, react@^18.2.0, "react@>= 16":
+react@^18.0.0, react@^18.2.0, "react@>= 16", react@>=16:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -7726,6 +8282,35 @@ relateurl@^0.2.7:
   resolved "https://registry.npmjs.org/relateurl/-/relateurl-0.2.7.tgz"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
+remark-gfm@^3.0.1:
+  version "3.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/remark-gfm/-/remark-gfm-3.0.1.tgz"
+  integrity sha1-CxgPCV4wNlRend2sDo3z+lz+5U8=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-gfm "^2.0.0"
+    micromark-extension-gfm "^2.0.0"
+    unified "^10.0.0"
+
+remark-parse@^10.0.0:
+  version "10.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/remark-parse/-/remark-parse-10.0.1.tgz"
+  integrity sha1-b2CuU+2/DPOOoiP+ZD22TREuB3U=
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-from-markdown "^1.0.0"
+    unified "^10.0.0"
+
+remark-rehype@^10.0.0:
+  version "10.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/remark-rehype/-/remark-rehype-10.1.0.tgz"
+  integrity sha1-MtyZ0gNMJ+yvLgFQ0iptzM2aYnk=
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/mdast" "^3.0.0"
+    mdast-util-to-hast "^12.1.0"
+    unified "^10.0.0"
+
 renderkid@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/renderkid/-/renderkid-3.0.0.tgz"
@@ -7843,6 +8428,13 @@ run-parallel@^1.1.9:
   integrity sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==
   dependencies:
     queue-microtask "^1.2.2"
+
+sade@^1.7.3:
+  version "1.8.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/sade/-/sade-1.8.1.tgz"
+  integrity sha1-CnjoHWWNOUiHvlfSpAm/cDo7JwE=
+  dependencies:
+    mri "^1.1.0"
 
 safe-buffer@^5.1.0, safe-buffer@>=5.1.0, safe-buffer@~5.2.0, safe-buffer@5.2.1:
   version "5.2.1"
@@ -8173,6 +8765,11 @@ sourcemap-codec@^1.4.8:
   resolved "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz"
   integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
+space-separated-tokens@^2.0.0:
+  version "2.0.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
+  integrity sha1-Hs2dI1CjhEVyw/SjErzrAYNIhZ8=
+
 spdy-transport@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/spdy-transport/-/spdy-transport-3.0.0.tgz"
@@ -8363,6 +8960,13 @@ style-loader@^3.3.1, style-loader@^3.3.2:
   version "3.3.2"
   resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/style-loader/-/style-loader-3.3.2.tgz"
   integrity sha1-6uvKcU2eRiwZqh41mQV7w2OSSJk=
+
+style-to-object@^0.4.0:
+  version "0.4.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/style-to-object/-/style-to-object-0.4.1.tgz"
+  integrity sha1-U8+Fb3z38XLXKTnZZ5VWRpul3jc=
+  dependencies:
+    inline-style-parser "0.1.1"
 
 stylehacks@^5.1.1:
   version "5.1.1"
@@ -8635,6 +9239,16 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
+trim-lines@^3.0.0:
+  version "3.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/trim-lines/-/trim-lines-3.0.1.tgz"
+  integrity sha1-2ALjMqB9+GHEiALAQyEBexvYczg=
+
+trough@^2.0.0:
+  version "2.1.0"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/trough/-/trough-2.1.0.tgz"
+  integrity sha1-D3tRGk/eZaRvGEd6s4hJsixVSHY=
+
 tryer@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/tryer/-/tryer-1.0.1.tgz"
@@ -8769,12 +9383,68 @@ unicode-property-aliases-ecmascript@^2.0.0:
   resolved "https://registry.npmjs.org/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.1.0.tgz"
   integrity sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==
 
+unified@^10.0.0:
+  version "10.1.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unified/-/unified-10.1.2.tgz"
+  integrity sha1-sdZOVdr+HwuYu2xxmIEQPs9sht8=
+  dependencies:
+    "@types/unist" "^2.0.0"
+    bail "^2.0.0"
+    extend "^3.0.0"
+    is-buffer "^2.0.0"
+    is-plain-obj "^4.0.0"
+    trough "^2.0.0"
+    vfile "^5.0.0"
+
 unique-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/unique-string/-/unique-string-2.0.0.tgz"
   integrity sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==
   dependencies:
     crypto-random-string "^2.0.0"
+
+unist-util-generated@^2.0.0:
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-generated/-/unist-util-generated-2.0.1.tgz"
+  integrity sha1-43xQrzXT7Rhaxs6stsoK+yioXK4=
+
+unist-util-is@^5.0.0:
+  version "5.2.1"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-is/-/unist-util-is-5.2.1.tgz"
+  integrity sha1-t0lg4UXBjctiJrxXkzWX9Uht6uk=
+  dependencies:
+    "@types/unist" "^2.0.0"
+
+unist-util-position@^4.0.0:
+  version "4.0.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-position/-/unist-util-position-4.0.4.tgz"
+  integrity sha1-k/bYx9azc9m4JYRGRYd8EnRV8Dc=
+  dependencies:
+    "@types/unist" "^2.0.0"
+
+unist-util-stringify-position@^3.0.0:
+  version "3.0.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-stringify-position/-/unist-util-stringify-position-3.0.3.tgz"
+  integrity sha1-A60zSCEMLZMHctZLSJWAwTp9s50=
+  dependencies:
+    "@types/unist" "^2.0.0"
+
+unist-util-visit-parents@^5.0.0, unist-util-visit-parents@^5.1.1:
+  version "5.1.3"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-visit-parents/-/unist-util-visit-parents-5.1.3.tgz"
+  integrity sha1-tFIIEbDKNChWM3hQRd96jWd2z+s=
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^5.0.0"
+
+unist-util-visit@^4.0.0:
+  version "4.1.2"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/unist-util-visit/-/unist-util-visit-4.1.2.tgz"
+  integrity sha1-ElpC0euHYoNxWjy1zOqlMYKMcuI=
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^5.0.0"
+    unist-util-visit-parents "^5.1.1"
 
 universalify@^0.2.0:
   version "0.2.0"
@@ -8854,6 +9524,16 @@ uuid@^8.3.2:
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
+uvu@^0.5.0:
+  version "0.5.6"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/uvu/-/uvu-0.5.6.tgz"
+  integrity sha1-J1TKILywu1m2TpmF6E0ugQWFAt8=
+  dependencies:
+    dequal "^2.0.0"
+    diff "^5.0.0"
+    kleur "^4.0.3"
+    sade "^1.7.3"
+
 v8-to-istanbul@^8.1.0:
   version "8.1.1"
   resolved "https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-8.1.1.tgz"
@@ -8867,6 +9547,24 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vfile-message@^3.0.0:
+  version "3.1.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/vfile-message/-/vfile-message-3.1.4.tgz"
+  integrity sha1-FaUIFq59fC0fqHCQp/n5ZhK1neo=
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+
+vfile@^5.0.0:
+  version "5.3.7"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/vfile/-/vfile-5.3.7.tgz"
+  integrity sha1-3gZ35mg+M4D6/EZUTP5gMRiCarc=
+  dependencies:
+    "@types/unist" "^2.0.0"
+    is-buffer "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+    vfile-message "^3.0.0"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"
@@ -9416,3 +10114,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zwitch@^2.0.0:
+  version "2.0.4"
+  resolved "https://pkgs.dev.azure.com/exxat-team/_packaging/V4/npm/registry/zwitch/-/zwitch-2.0.4.tgz"
+  integrity sha1-yCfUsKy3b8PmhaTG7CkC1RBw6dc=
