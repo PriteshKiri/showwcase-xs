@@ -23,14 +23,19 @@ const ViewFeed = () => {
           return <ThreadCard props={thread} />;
         })
       ) : (
-        <p className="text-white">Loading...</p>
+        <div className=" h-[100%] flex justify-center items-center p-[40px]">
+          <div
+            className="w-12 h-12 rounded-full animate-spin
+          border-y border-solid border-white border-t-transparent shadow-md"
+          ></div>
+        </div>
       )}
 
       {Object.keys(feed).length ? (
         <div className="py-[15px]">
           <a
             href="https://www.showwcase.com/"
-            className="link"
+            className="sxs-link"
             target="_blank"
             rel="noopener noreferrer"
           >
