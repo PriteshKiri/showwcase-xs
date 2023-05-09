@@ -5,7 +5,7 @@ const ThreadCard = ({ props }: any) => {
   const [imgErr, setImgErr] = useState(false);
   const { message } = props;
 
-  console.log(props.title, props.message, props.user);
+  // console.log(props.title, props.message, props.user);
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] my-2 px-2">
       <div className="top w-full flex justify-between items-center pt-2 px-2 bdr-b">
