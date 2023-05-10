@@ -7,9 +7,10 @@ const ViewFeed = () => {
   useEffect(() => {
     async function fetchFeeds() {
       const response = await fetch(
-        "https://cache.showwcase.com/feeds/discover"
+        "https://cache.showwcase.com/feeds/discover?limit=50"
       );
       const data = await response.json();
+      console.log(data);
       setFeed(data);
     }
 

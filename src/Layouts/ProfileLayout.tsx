@@ -46,7 +46,12 @@ const ProfileLayout = () => {
     }
   }, [fetchMode]);
   return (
-    <div className="w-full h-[90vh] overflow-y-scroll">
+    <div
+      className="w-full h-[90vh] overflow-y-scroll"
+      onLoad={() => {
+        localStorage.setItem("username", userDetails?.username);
+      }}
+    >
       {logout && (
         <div className="w-full h-[100%] flex flex-col items-center justify-center gap-4">
           <img

@@ -313,7 +313,7 @@ const Layout = ({ children }: any) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-logout w-[20px] h-[20px] "
+              className="icon icon-tabler icon-tabler-logout w-[24px] h-[24px] "
               width="44"
               height="44"
               viewBox="0 0 24 24"
@@ -329,12 +329,12 @@ const Layout = ({ children }: any) => {
             </svg>
           </button>
 
-          <img
+          {/* <img
             src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683316744/showwcasexs/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black_gboe9d.png
           "
             alt="User profile"
             className="w-[30px] h-[30px] rounded-full"
-          />
+          /> */}
         </header>
 
         <SetLogOutContext.Provider value={setLogout}>
