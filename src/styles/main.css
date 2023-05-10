@@ -39,6 +39,12 @@
   border: 1px solid #313131;
 }
 
+.thread-content pre {
+  width: 380px;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
 .thread-content p,
 a {
   font-size: 12px;
@@ -55,5 +61,13 @@ a {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.truncate-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
   -webkit-box-orient: vertical;
 }
