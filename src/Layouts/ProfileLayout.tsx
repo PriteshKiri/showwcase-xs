@@ -9,14 +9,17 @@ const ProfileLayout = () => {
   const logout: any = useContext(LogOutContext);
   const setLogOut: any = useContext(SetLogOutContext);
   useEffect(() => {
-    if (localStorage.getItem("key") !== "") {
+    if (
+      localStorage.getItem("key") !== "" &&
+      localStorage.getItem("key") !== null
+    ) {
       setFetchMode(true);
     } else {
       setLogOut(true);
       setFetchMode(false);
     }
-
-    console.log("onload", logout);
+    document.cookie = "objectD=12345";
+    console.log("onload", logout, "key", localStorage.getItem("key"));
   }, []);
 
   useEffect(() => {
@@ -39,6 +42,14 @@ const ProfileLayout = () => {
           if (!response.error) {
             setLogOut(false);
             setUserDetails(response);
+            if (
+              document.cookie.replace(
+                /(?:(?:^|.*;\s*)objectD\s*\=\s*([^;]*).*$)|^.*$/,
+                "$1"
+              )
+            ) {
+              console.log("cookiee is there");
+            }
           }
           setErrMsg(response.error);
         })
@@ -61,6 +72,7 @@ const ProfileLayout = () => {
           <h3 className="text-center">
             Welcome to showwcaseXS! Enter your API key to login.
           </h3>
+
           <small className="text-center">
             Click{" "}
             <a

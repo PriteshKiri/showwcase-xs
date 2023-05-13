@@ -66,10 +66,10 @@ const ThreadCard = ({ props }: any) => {
           </div>
         )}
 
-        {props.images && (
+        {props?.images?.length !== 0 && (
           <img
             className="w-full rounded-md my-[15px]"
-            src={props.images[0]}
+            src={props?.images[0]}
             alt=""
           />
         )}
@@ -85,18 +85,28 @@ const ThreadCard = ({ props }: any) => {
               />
             )}
             <div className="w-full">
-              <h4 className="mx-[5px] my-[15px]">
-                {props.linkPreviewMeta.title}
-              </h4>
-              <p className="truncate-2 ">{props.linkPreviewMeta.description}</p>
-              <a
-                className="text-blue-500 mx-[5px] mb-[15px]"
-                href={props.linkPreviewMeta.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {props.linkPreviewMeta.url}
-              </a>
+              {props?.linkPreviewMeta?.title && (
+                <h4 className="mx-[5px] my-[15px]">
+                  {props?.linkPreviewMeta?.title}
+                </h4>
+              )}
+
+              {props?.linkPreviewMeta?.description && (
+                <p className="truncate-2 ">
+                  {props?.linkPreviewMeta?.description}
+                </p>
+              )}
+
+              {props?.linkPreviewMeta?.url && (
+                <a
+                  className="text-blue-500 mx-[5px] mb-[15px]"
+                  href={props?.linkPreviewMeta?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {props?.linkPreviewMeta?.url}
+                </a>
+              )}
             </div>
           </div>
         ) : props.linkPreviewMeta !== "null" &&

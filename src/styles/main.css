@@ -46,10 +46,18 @@
 }
 
 .thread-content p,
-a {
+a,
+li {
   font-size: 12px;
   margin: 15px 5px;
   word-break: break-word;
+}
+
+.thread-content ul {
+  font-size: 12px;
+  margin: 15px 15px;
+  word-break: break-word;
+  list-style-type: circle;
 }
 
 .thread-content a {
