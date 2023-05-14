@@ -25,12 +25,7 @@ const RoadmapLayout = () => {
       <div className="py-[15px] mycenter bdr-b ">
         <h3>Explore our Roadmaps</h3>
       </div>
-      {snackbar && (
-        <SnackBar message={snackbar.message} />
-        // <div className="fixed top-[120px] right-[100px] bg-white text-gray-800 py-2 px-4 rounded">
-        //   {snackbar.message}
-        // </div>
-      )}
+      {snackbar && <SnackBar message={snackbar.message} />}
       <div className="flex flex-col p-[10px] gap-y-[10px] h-[91vh]  overflow-y-scroll ">
         {Object.keys(roadmaps).length ? (
           roadmaps.map((roadmap) => {

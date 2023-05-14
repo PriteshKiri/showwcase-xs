@@ -29,7 +29,7 @@ const CommunityLayout = () => {
               return <CommunityCard props={community} />;
             })
           ) : (
-            <div className=" h-[100%] flex justify-center items-center p-[40px]">
+            <div className="h-[91vh] flex justify-center items-center p-[40px]">
               <div
                 className="w-12 h-12 rounded-full animate-spin
         border-y border-solid border-white border-t-transparent shadow-md"

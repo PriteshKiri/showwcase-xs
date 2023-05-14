@@ -21,10 +21,7 @@ const CommunityCard = ({ props }: any) => {
         />
       )}
 
-      <p className="text-[12px] text-center w-full py-[10px] justify-center">
-        {props.name}
-      </p>
-      <div className="flex">
+      <div className="flex pt-[10px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[3px] w-[18px] h-[18px] "
@@ -48,6 +45,11 @@ const CommunityCard = ({ props }: any) => {
           {props.totalMembers}
         </p>
       </div>
+
+      <p className="text-[12px] text-center w-full pb-[10px] justify-center">
+        {props.name}
+      </p>
+
       <a
         href={`https://www.showwcase.com/community/${props.slug}`}
         target="_blank"
