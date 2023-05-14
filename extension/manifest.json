@@ -7,5 +7,10 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+
+  "permissions": ["tabs", "contextMenus"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; 'https://www.google.com';unsafe-inline; object-src 'self'"
+  }
 }
