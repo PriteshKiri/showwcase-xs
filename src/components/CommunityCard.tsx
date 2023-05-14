@@ -19,7 +19,7 @@ const CommunityCard = ({ props }: any) => {
           alt="User profile"
           className="w-[40px] h-[40px] rounded-md my-2"
         />
-      )}
+      )}  
 
       <div className="flex pt-[10px]">
         <svg

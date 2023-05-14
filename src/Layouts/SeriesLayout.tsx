@@ -23,7 +23,7 @@ const SeriesLayout = () => {
   return (
     <div className="overflow-y-scroll h-[91vh] flex flex-col">
       <div className="py-[15px] mycenter bdr-b ">
-        <h3>Explore our Series</h3>
+        <h3>Explore our Trending Series</h3>
       </div>
       {snackbar && <SnackBar message={snackbar.message} />}
       <div className="flex flex-col h-[91vh]  overflow-y-scroll ">
@@ -47,7 +47,7 @@ border-y border-solid border-white border-t-transparent shadow-md"
         {Object.keys(series).length ? (
           <div className="pb-[15px] mycenter">
             <a
-              href="https://www.showwcase.com/"
+              href="https://www.showwcase.com/shows/series"
               className="sxs-link"
               target="_blank"
               rel="noopener noreferrer"

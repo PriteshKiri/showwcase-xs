@@ -20,7 +20,7 @@ const CommunityLayout = () => {
   return (
     <div className="overflow-y-scroll h-[91vh] flex flex-col">
       <div className="py-[15px] mycenter bdr-b ">
-        <h3>Explore out Communites</h3>
+        <h3>Explore our Communites</h3>
       </div>
       <div className="flex flex-col h-[91vh]  overflow-y-scroll ">
         <div className="flex flex-row justify-evenly items-start flex-wrap mt-[10px] gap-x-[5px] gap-y-[10px]">
@@ -40,7 +40,7 @@ const CommunityLayout = () => {
         {Object.keys(communities).length ? (
           <div className="py-[15px] mycenter">
             <a
-              href="https://www.showwcase.com/"
+              href="https://www.showwcase.com/communities"
               className="sxs-link"
               target="_blank"
               rel="noopener noreferrer"
