@@ -110,7 +110,7 @@ const ProfileLayout = () => {
                 localStorage.setItem("key", inputKey);
                 setFetchMode(true);
               }}
-              disabled={!inputKey ? true : false}
+              disabled={inputKey.trim() ? false : true}
             >
               Enter
             </button>
