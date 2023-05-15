@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import ThreadCard from "../components/ThreadCard";
+import { useSnackbar } from "../util";
+import SnackBar from "../components/SnackBar";
 
 const BookmarkLayout = () => {
   const [bookmarkThreads, setBookmarkThreads] = useState([]);
+  const { snackbar, showSnackbar }: any = useSnackbar();
 
   useEffect(() => {
     fetch("https://cache.showwcase.com/bookmarks", {
@@ -25,9 +28,11 @@ const BookmarkLayout = () => {
 
   return (
     <div className="flex flex-col items-center h-[88vh] mt-[10px] overflow-y-scroll">
+      {snackbar && <SnackBar message={snackbar.message} />}
+
       {Object.keys(bookmarkThreads).length ? (
         bookmarkThreads.map((thread) => {
-          return <ThreadCard props={thread} />;
+          return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
         })
       ) : (
         <div className=" h-[100%] flex justify-center items-center p-[40px]">

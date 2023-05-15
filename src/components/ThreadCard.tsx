@@ -1,14 +1,19 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-const ThreadCard = ({ props }: any) => {
+import { copyToClipboard } from "../util";
+const ThreadCard = ({ props, showSnackbar }: any) => {
   const [imgErr, setImgErr] = useState(false);
   const { message } = props;
 
-  // console.log(props.images);
+  function handleClick() {
+    copyToClipboard(`https://www.showwcase.com/thread/${props?.id}`);
+    showSnackbar("Link copined to your clipboard", 3);
+  }
+
   return (
-    <div className="bdr-all w-[95%] bg-[#1a1a1b] my-2 px-2">
-      <div className="top w-full flex justify-between items-center pt-2 px-2 bdr-b">
+    <div className="bdr-all w-[95%] bg-[#1a1a1b] my-[8px] px-[8px]">
+      <div className="top w-full flex justify-between items-center pt-[8px] px-[8px] bdr-b">
         <div className="flex items-center gap-2">
           {!imgErr && props?.user?.profilePictureKey ? (
             <img
@@ -139,6 +144,91 @@ const ThreadCard = ({ props }: any) => {
         ) : (
           ""
         )}
+      </div>
+      <div className="action-buttons pb-[8px] px-[4px] flex justify-between">
+        <div className="flex gap-x-[6px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-heart bg-[#502323] rounded-full p-[2px] w-[16px] h-[16px] "
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="#eb5757"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+          </svg>
+          <p className="text-[12px] font-bold">{props?.totalUpvotes}</p>
+        </div>
+
+        <div className="flex gap-x-[6px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-arrow-up-circle bg-[#103721] rounded-full p-[2px] w-[16px] h-[16px] "
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="#25af60"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="8" x2="8" y2="12" />
+            <line x1="12" y1="8" x2="12" y2="16" />
+            <line x1="16" y1="12" x2="12" y2="8" />
+          </svg>
+          <p className="text-[12px] font-bold">{props?.totalBoosts}</p>
+        </div>
+
+        <div className="flex gap-x-[6px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[2px] w-[16px] h-[16px] "
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="#ffbf00"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
+            <line x1="12" y1="12" x2="12" y2="12.01" />
+            <line x1="8" y1="12" x2="8" y2="12.01" />
+            <line x1="16" y1="12" x2="16" y2="12.01" />
+          </svg>
+          <p className="text-[12px] font-bold">{props?.totalReplies}</p>
+        </div>
+
+        <div
+          className="flex gap-x-[6px] cursor-pointer"
+          onClick={() => handleClick()}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[2px] w-[16px] h-[16px] "
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="#4595d0"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7z" />
+          </svg>
+        </div>
       </div>
     </div>
   );

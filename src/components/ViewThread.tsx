@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import ThreadCard from "./ThreadCard";
+import { useSnackbar } from "../util";
+import SnackBar from "./SnackBar";
 
 const ViewThread = () => {
   const [threads, setThreads] = useState([]);
+  const { snackbar, showSnackbar }: any = useSnackbar();
 
   const username = localStorage.getItem("username");
   useEffect(() => {
@@ -22,9 +25,11 @@ const ViewThread = () => {
   }, []);
   return (
     <div className="flex flex-col items-center h-[83vh] mt-[10px] overflow-y-scroll">
+      {snackbar && <SnackBar message={snackbar.message} />}
+
       {Object.keys(threads).length ? (
         threads.map((thread) => {
-          return <ThreadCard props={thread} />;
+          return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
         })
       ) : (
         <div className=" h-[100%] flex justify-center items-center p-[40px]">
