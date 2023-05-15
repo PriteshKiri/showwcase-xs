@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import ThreadCard from "./ThreadCard";
+import { useSnackbar } from "../util";
+import SnackBar from "./SnackBar";
 
 const ViewFeed = () => {
   const [feed, setFeed] = useState([]);
+  const { snackbar, showSnackbar }: any = useSnackbar();
 
   useEffect(() => {
     async function fetchFeeds() {
@@ -19,9 +22,11 @@ const ViewFeed = () => {
 
   return (
     <div className="flex flex-col items-center h-[80vh] mt-[10px] overflow-y-scroll">
+      {snackbar && <SnackBar message={snackbar.message} />}
+
       {Object.keys(feed).length ? (
         feed.map((thread) => {
-          return <ThreadCard props={thread} />;
+          return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
         })
       ) : (
         <div className=" h-[100%] flex justify-center items-center p-[40px]">

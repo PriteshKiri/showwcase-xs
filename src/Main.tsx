@@ -1,7 +1,12 @@
 import { useContext, useEffect } from "react";
 import NotificationLayout from "./Layouts/NotificationLayout";
 import ProfileLayout from "./Layouts/ProfileLayout";
-import { LogOutContext, SetLogOutContext, TabContext } from "./Layouts/Layout";
+import {
+  LogOutContext,
+  SetLogOutContext,
+  SideBarStatusContext,
+  TabContext,
+} from "./Layouts/Layout";
 import FeedLayout from "./Layouts/FeedLayout";
 import RoadmapLayout from "./Layouts/RoadmapLayout";
 import SeriesLayout from "./Layouts/SeriesLayout";
@@ -13,6 +18,7 @@ const Main = (): any => {
   const tab: any = useContext(TabContext);
   const logout: any = useContext(LogOutContext);
   const setLogOut: any = useContext(SetLogOutContext);
+  const open: any = useContext(SideBarStatusContext);
   useEffect(() => {
     if (!logout) {
       setLogOut(true);
@@ -33,14 +39,14 @@ const Main = (): any => {
 
   console.log("main", logout);
 
-  if (!localStorage.getItem("key")) {
+  if (!localStorage.getItem("key") && open) {
     console.log("nokey", localStorage.getItem("key"));
     if (navTabs.includes(tab)) {
       return <ProfileLayout />;
     }
   }
 
-  if (localStorage.getItem("key") !== "") {
+  if (localStorage.getItem("key") !== "" && open) {
     console.log("key is", localStorage.getItem("key"));
     if (tab === "profile") {
       return <ProfileLayout />;

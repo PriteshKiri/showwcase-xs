@@ -30,7 +30,7 @@ const RoadmapCard = ({ props, showSnackbar }: any) => {
 
         <button
           className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white"
-          onClick={handleClick}
+          onClick={()=>handleClick()}
         >
           Share
         </button>
