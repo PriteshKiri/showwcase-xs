@@ -12,7 +12,7 @@ const ViewThread = () => {
       );
       const data = await response.json();
       const filtered = data.filter(
-        (item: any) => item.participants.length === 0
+        (item: any) => item?.participants?.length === 0
       );
       console.log(filtered);
       setThreads(filtered);
