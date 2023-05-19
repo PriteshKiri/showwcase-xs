@@ -8,6 +8,12 @@
       "js": ["content.js"]
     }
   ],
+  "icons": {
+    "16": "./images/sxs-16x16.png",
+    "32": "images/sxs-32x32.png",
+    "48": "images/sxs-64x64.png",
+    "128": "images/sxs-128x128.png"
+  },
 
   "permissions": ["tabs", "contextMenus", "scripting"],
   "content_security_policy": {

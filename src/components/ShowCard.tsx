@@ -16,14 +16,14 @@ const ShowCard = ({ props, showSnackbar }: any) => {
     <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-2 px-2">
       <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
         <div className="flex items-center gap-2">
-          {!imgErr && props?.user?.profilePictureKey ? (
+          {!imgErr && props?.user?.profilePictureUrl ? (
             <img
-              src={props?.user?.profilePictureKey}
+              src={props?.user?.profilePictureUrl}
               onError={() => {
                 setImgErr(true);
               }}
               alt="User profile"
-              className="w-[40px] h-[40px] rounded-full"
+              className="w-[40px] h-[40px] rounded-full bg-[#1e3b57]"
             />
           ) : (
             <img

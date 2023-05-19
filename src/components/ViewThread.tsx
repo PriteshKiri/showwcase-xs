@@ -17,7 +17,7 @@ const ViewThread = () => {
       const filtered = data.filter(
         (item: any) => item?.participants?.length === 0
       );
-      console.log(filtered);
+
       setThreads(filtered);
     }
 
@@ -52,7 +52,7 @@ const ViewThread = () => {
           </a>
         </div>
       ) : (
-        "NO threads"
+        ""
       )}
     </div>
   );
