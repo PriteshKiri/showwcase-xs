@@ -15,14 +15,14 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
     <div className="bdr-all w-[95%] bg-[#1a1a1b] my-[8px] px-[8px]">
       <div className="top w-full flex justify-between items-center pt-[8px] px-[8px] bdr-b">
         <div className="flex items-center gap-2">
-          {!imgErr && props?.user?.profilePictureKey ? (
+          {!imgErr && props?.user?.profilePictureUrl ? (
             <img
-              src={props?.user?.profilePictureKey}
+              src={props?.user?.profilePictureUrl}
               onError={() => {
                 setImgErr(true);
               }}
               alt="User profile"
-              className="w-[40px] h-[40px] rounded-full"
+              className="w-[40px] h-[40px] rounded-full bg-[#1e3b57]"
             />
           ) : (
             <img

@@ -4,9 +4,9 @@ const CommunityCard = ({ props }: any) => {
   const [imgErr, setImgErr] = useState(false);
   return (
     <div className="w-[45%] bdr-all rounded-md p-4 flex flex-col justify-start items-center">
-      {!imgErr && props.pictureKey ? (
+      {!imgErr && props?.pictureUrl ? (
         <img
-          src={props.pictureKey}
+          src={props?.pictureUrl}
           onError={() => {
             setImgErr(true);
           }}
@@ -17,9 +17,9 @@ const CommunityCard = ({ props }: any) => {
         <img
           src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683316744/showwcasexs/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black_gboe9d.png"
           alt="User profile"
-          className="w-[40px] h-[40px] rounded-md my-2"
+          className="w-[40px] h-[40px] rounded-md my-2 bg-[#1e3b57]"
         />
-      )}  
+      )}
 
       <div className="flex pt-[10px]">
         <svg

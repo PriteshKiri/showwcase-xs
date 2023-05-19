@@ -22,34 +22,39 @@ const NotificationLayout = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center h-[88vh] mt-[10px] overflow-y-scroll">
-      {Object.keys(notifications).length ? (
-        notifications.map((thread) => {
-          return <NotificationCard props={thread} />;
-        })
-      ) : (
-        <div className=" h-[100%] flex justify-center items-center p-[40px]">
-          <div
-            className="w-12 h-12 rounded-full animate-spin
+    <div className="overflow-y-scroll h-[88vh] flex flex-col">
+      <div className="py-[15px] mycenter bdr-b ">
+        <h3>Notifications</h3>
+      </div>
+      <div className="flex flex-col items-center h-[88vh] pt-[10px] overflow-y-scroll">
+        {Object.keys(notifications).length ? (
+          notifications.map((thread) => {
+            return <NotificationCard props={thread} />;
+          })
+        ) : (
+          <div className=" h-[100%] flex justify-center items-center p-[40px]">
+            <div
+              className="w-12 h-12 rounded-full animate-spin
       border-y border-solid border-white border-t-transparent shadow-md"
-          ></div>
-        </div>
-      )}
+            ></div>
+          </div>
+        )}
 
-      {Object.keys(notifications).length ? (
-        <div className="py-[15px]">
-          <a
-            href="https://www.showwcase.com/"
-            className="sxs-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View more
-          </a>
-        </div>
-      ) : (
-        ""
-      )}
+        {Object.keys(notifications).length ? (
+          <div className="py-[15px]">
+            <a
+              href="https://www.showwcase.com/"
+              className="sxs-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View more
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

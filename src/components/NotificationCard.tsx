@@ -17,9 +17,9 @@ const NotificationCard = ({ props }: any) => {
       {types.includes(type) && (
         <div className="relative flex items-center justify-center  m-[25px] w-[340px]">
           {/* Heading section */}
-          {!imgErr && initiators[0]?.profilePictureKey ? (
+          {!imgErr && initiators[0]?.profilePictureUrl ? (
             <img
-              src={initiators[0]?.profilePictureKey}
+              src={initiators[0]?.profilePictureUrl}
               onError={() => {
                 setImgErr(true);
               }}
@@ -194,17 +194,17 @@ const NotificationCard = ({ props }: any) => {
                     {data?.reply?.title}
                   </p>
                 )}
-                {type === "new_reply" && data?.reply?.image?.length && (
+                {type === "new_reply" && data?.reply?.images && (
                   <img
-                    src={data?.reply?.image[0]}
-                    className=" pb-[7px] pt-[12px] w-full"
+                    src={data?.reply?.images[0]}
+                    className=" pb-[7px] pt-[12px] w-full rounded-md"
                     alt=""
                   ></img>
                 )}
                 {type === "new_reply" && data?.reply?.gif && (
                   <img
                     src={data?.reply?.gif?.big?.url}
-                    className=" pb-[7px] pt-[12px] w-full"
+                    className=" pb-[7px] pt-[12px] w-full "
                     alt=""
                   ></img>
                 )}
