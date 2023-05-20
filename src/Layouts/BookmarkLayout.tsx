@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import ThreadCard from "../components/ThreadCard";
+import ThreadCard from "../components/cards/ThreadCard";
 import { useSnackbar } from "../util";
-import SnackBar from "../components/SnackBar";
+import SnackBar from "../components/util/SnackBar";
+import Loader from "../components/util/Loader";
 
 const BookmarkLayout = () => {
   const [bookmarkThreads, setBookmarkThreads] = useState([]);
@@ -11,52 +12,51 @@ const BookmarkLayout = () => {
     fetch("https://cache.showwcase.com/bookmarks", {
       method: "GET",
       headers: {
-        "x-api-key": `${localStorage.getItem("key")}`,
+        "x-api-key": `${localStorage.getItem("sxs_key")}`,
       },
     })
       .then((response) => response.json())
       .then((response) => {
         if (!response.error) {
-          console.log(response);
           setBookmarkThreads(response);
-        } else {
-          console.log(response.error, "err");
         }
       })
       .catch((err) => console.error(err));
   }, []);
 
   return (
-    <div className="flex flex-col items-center h-[88vh] mt-[10px] overflow-y-scroll">
-      {snackbar && <SnackBar message={snackbar.message} />}
+    <div className="overflow-y-scroll h-[91vh] flex flex-col">
+      <div className="py-[15px] mycenter bdr-b ">
+        <p className="text-[14px] font-bold text-center">Bookmarks</p>
+      </div>
+      <div className="flex flex-col items-center h-[91vh] pt-[10px] overflow-y-scroll">
+        {snackbar && (
+          <SnackBar message={snackbar.message} type={snackbar.type} />
+        )}
 
-      {Object.keys(bookmarkThreads).length ? (
-        bookmarkThreads.map((thread) => {
-          return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
-        })
-      ) : (
-        <div className=" h-[100%] flex justify-center items-center p-[40px]">
-          <div
-            className="w-12 h-12 rounded-full animate-spin
-      border-y border-solid border-white border-t-transparent shadow-md"
-          ></div>
-        </div>
-      )}
+        {Object.keys(bookmarkThreads)?.length !== 0 ? (
+          bookmarkThreads.map((thread) => {
+            return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
+          })
+        ) : (
+          <Loader />
+        )}
 
-      {Object.keys(bookmarkThreads).length ? (
-        <div className="py-[15px]">
-          <a
-            href="https://www.showwcase.com/"
-            className="sxs-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View more
-          </a>
-        </div>
-      ) : (
-        ""
-      )}
+        {Object.keys(bookmarkThreads)?.length !== 0 ? (
+          <div className="py-[15px]">
+            <a
+              href="https://www.showwcase.com/bookmarks"
+              className="sxs-link hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View more
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

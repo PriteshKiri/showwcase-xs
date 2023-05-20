@@ -9,28 +9,28 @@ const FeedLayout = () => {
     <div>
       <div className="feed-nav w-full flex justify-around items-center bdr-b ">
         <div
-          className={`pt-4 pb-1 border-b-2 border-blue-400/0 cursor-pointer ${
+          className={`pt-[16px] pb-[10px] border-b-[2px] border-blue-400/0 cursor-pointer text-[12px] ${
             tabType === "feed" ? "border-blue-400/100" : ""
           }`}
           onClick={() => setTabType("feed")}
         >
-          <p>Feeds</p>
+          <p className="font-bold">Feeds</p>
         </div>
         <div
-          className={`pt-4 pb-1 border-b-2 border-blue-400/0 cursor-pointer ${
+          className={`pt-[16px] pb-[10px] border-b-[2px] border-blue-400/0 cursor-pointer text-[12px] ${
             tabType === "thread" ? "border-blue-400/100" : ""
           }`}
           onClick={() => setTabType("thread")}
         >
-          <p>My Threads</p>
+          <p className="font-bold">My Threads</p>
         </div>
         <div
-          className={`pt-4 pb-1 border-b-2 border-blue-400/0 cursor-pointer ${
+          className={`pt-[16px] pb-[10px] border-b-[2px] border-blue-400/0 cursor-pointer text-[12px] ${
             tabType === "write_thread" ? "border-blue-400/100" : ""
           }`}
           onClick={() => setTabType("write_thread")}
         >
-          <p>Write Thread</p>
+          <p className="font-bold">Write Thread</p>
         </div>
       </div>
       {tabType === "feed" ? (

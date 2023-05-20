@@ -1,20 +1,20 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { copyToClipboard } from "../util";
+import { copyToClipboard } from "../../util";
 const ThreadCard = ({ props, showSnackbar }: any) => {
   const [imgErr, setImgErr] = useState(false);
   const { message } = props;
 
   function handleClick() {
     copyToClipboard(`https://www.showwcase.com/thread/${props?.id}`);
-    showSnackbar("Link copined to your clipboard", 3);
+    showSnackbar("Thread link copied to clipboard!", 3, "clipboard");
   }
 
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] my-[8px] px-[8px]">
       <div className="top w-full flex justify-between items-center pt-[8px] px-[8px] bdr-b">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img
               src={props?.user?.profilePictureUrl}
@@ -33,13 +33,20 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
           )}
 
           <div>
-            <p className="text-sm">{props?.user?.displayName}</p>
-            <p className="text-xs text-slate-400">{`@${props?.user?.username}`}</p>
+            <a
+              href={`https://www.showwcase.com/${props?.user?.username}`}
+              className="text-[14px] text-white m-0 visited:text-white hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {props?.user?.displayName}
+            </a>
+            <p className="text-[12px] !text-slate-400">{`@${props?.user?.username}`}</p>
           </div>
         </div>
         <a
           href={`https://www.showwcase.com/thread/${props?.id}`}
-          className="p-[4px] bdr-all rounded-md"
+          className="p-[4px] bdr-all rounded-[6px]"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -63,17 +70,21 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         {props?.title && <ReactMarkdown children={props?.title} />}
 
         {message && (
-          <ReactMarkdown children={message} remarkPlugins={[remarkGfm]} />
+          <ReactMarkdown
+            linkTarget="_blank"
+            children={message}
+            remarkPlugins={[remarkGfm]}
+          />
         )}
         {props?.code && (
-          <div className="p-[4px] mx-[2px] my-[15px] bdr-all text-slate-400 rounded-md italic">
+          <div className="p-[4px] mx-[2px] my-[15px] bdr-all text-slate-400 rounded-[6px] italic">
             <ReactMarkdown children={props?.code} />
           </div>
         )}
 
         {props?.images && (
           <img
-            className="w-full rounded-md my-[15px]"
+            className="w-full rounded-[6px] my-[15px]"
             src={props?.images[0]}
             alt=""
           />
@@ -81,19 +92,19 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
 
         {props?.linkPreviewMeta !== "null" &&
         props?.linkPreviewMeta.type === "external" ? (
-          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-md  w-full flex flex-col  justify-center items-center">
+          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-full flex flex-col  justify-center items-center">
             {props?.linkPreviewMeta.images && (
               <img
-                className="w-full rounded-md"
+                className="w-full rounded-[6px]"
                 src={props?.linkPreviewMeta?.images[0]}
                 alt=""
               />
             )}
             <div className="w-full">
               {props?.linkPreviewMeta?.title && (
-                <h4 className="mx-[5px] my-[15px]">
+                <p className="mx-[5px] my-[15px]">
                   {props?.linkPreviewMeta?.title}
-                </h4>
+                </p>
               )}
 
               {props?.linkPreviewMeta?.description && (
@@ -104,7 +115,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
 
               {props?.linkPreviewMeta?.url && (
                 <a
-                  className="text-blue-500 mx-[5px] mb-[15px]"
+                  className="text-blue-500 mx-[5px] mb-[15px] hover:underline"
                   href={props?.linkPreviewMeta?.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,18 +127,18 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
           </div>
         ) : props?.linkPreviewMeta !== "null" &&
           props?.linkPreviewMeta?.type === "project" ? (
-          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-md  w-full flex flex-col  justify-center items-center">
+          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-full flex flex-col  justify-center items-center">
             {props?.linkPreviewMeta?.project?.coverImage && (
               <img
-                className="w-full rounded-md"
+                className="w-full rounded-[6px]"
                 src={props?.linkPreviewMeta?.project?.coverImage}
                 alt=""
               />
             )}
             <div className="w-full">
-              <h4 className="mx-[5px] my-[15px]">
-                {props?.linkPreviewMeta?.project.title}
-              </h4>
+              <p className="mx-[5px] my-[15px]">
+                {props?.linkPreviewMeta?.project?.title}
+              </p>
               <p className="truncate-2 ">
                 {props?.linkPreviewMeta?.project?.projectSummary}
               </p>

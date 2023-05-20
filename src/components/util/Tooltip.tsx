@@ -27,7 +27,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
           {children}
         </div>
         {isHovered && (
-          <div className="absolute right-[35px] top-1/2 -translate-y-1/2 px-[8px] py-[4px] text-black rounded-[4px]  drop-shadow-md bg-white/95 text-[12px]">
+          <div className="absolute break-normal right-[35px] top-1/2 -translate-y-1/2 px-[8px] py-[4px] text-black rounded-[4px]  drop-shadow-md bg-white/95 text-[12px] block">
             {content}
           </div>
         )}
@@ -44,7 +44,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
           {children}
         </div>
         {isHovered && (
-          <div className="absolute right-[45px] top-1/2 -translate-y-1/2 px-[8px] py-[4px] text-white rounded-[4px]  drop-shadow-md bg-gradient-to-r from-cyan-500 to-blue-500 text-[12px]">
+          <div className="absolute break-normal right-[45px] top-1/2 -translate-y-1/2 px-[8px] py-[4px] text-white rounded-[4px]  drop-shadow-md bg-gradient-to-r from-cyan-500 to-blue-500 text-[12px]">
             {content}
           </div>
         )}

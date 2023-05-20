@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import RoadmapCard from "../components/RoadmapCard";
+import RoadmapCard from "../components/cards/RoadmapCard";
 import { useSnackbar } from "../util";
-import SnackBar from "../components/SnackBar";
+import SnackBar from "../components/util/SnackBar";
+import Loader from "../components/util/Loader";
 
 const RoadmapLayout = () => {
   const [roadmaps, setRoadmaps] = useState([]);
@@ -12,10 +13,7 @@ const RoadmapLayout = () => {
       .then((response) => response.json())
       .then((response) => {
         if (!response.error) {
-          console.log(response);
           setRoadmaps(response);
-        } else {
-          console.log(response.error, "err");
         }
       })
       .catch((err) => console.error(err));
@@ -23,21 +21,18 @@ const RoadmapLayout = () => {
   return (
     <div className="overflow-y-scroll h-[91vh] flex flex-col">
       <div className="py-[15px] mycenter bdr-b ">
-        <h3>Explore our Roadmaps</h3>
+        <p className="text-[14px] font-bold text-center">
+          Explore Roadmaps
+        </p>
       </div>
-      {snackbar && <SnackBar message={snackbar.message} />}
+      {snackbar && <SnackBar message={snackbar.message} type={snackbar.type} />}
       <div className="flex flex-col p-[10px] gap-y-[10px] h-[91vh]  overflow-y-scroll ">
-        {Object.keys(roadmaps).length ? (
+        {Object.keys(roadmaps)?.length !== 0 ? (
           roadmaps.map((roadmap) => {
             return <RoadmapCard props={roadmap} showSnackbar={showSnackbar} />;
           })
         ) : (
-          <div className=" h-[100%] flex justify-center items-center p-[40px]">
-            <div
-              className="w-12 h-12 rounded-full animate-spin
-    border-y border-solid border-white border-t-transparent shadow-md"
-            ></div>
-          </div>
+          <Loader />
         )}
       </div>
     </div>

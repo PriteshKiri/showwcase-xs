@@ -1,5 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
-import Tooltip from "../components/Tooltip";
+import Tooltip from "../components/util/Tooltip";
+import { useSnackbar } from "../util";
+import SnackBar from "../components/util/SnackBar";
 const TabContext = createContext<string | undefined>(undefined);
 const LogOutContext = createContext<boolean | undefined>(undefined);
 const SideBarStatusContext = createContext<boolean | undefined>(undefined);
@@ -10,22 +12,25 @@ const Layout = ({ children }: any) => {
   const [open, setOpen] = useState<boolean>(true);
   const [tab, setTab] = useState<string>("profile");
   const [logout, setLogout] = useState<boolean | any>(false);
+  const { snackbar, showSnackbar }: any = useSnackbar();
   const openSidebar = () => {
     setOpen(!open);
   };
 
-  useEffect(() => {
-    console.log("Layout component logout status", logout);
-  }, [logout]);
+  // useEffect(() => {
+  //   console.log("Layout component logout status", logout);
+  // }, [logout]);
 
   return (
     <div
-      className={` font-sans flex  z-[9999999] fixed right-0 top-0 h-[100vh] app  `}
+      className={`font-sans flex  z-[9999999] fixed right-0 top-0 h-[100vh] app`}
     >
-      <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-lg flex flex-col items-center justify-around gap-1 ">
+      {snackbar && <SnackBar message={snackbar.message} type={snackbar.type} />}
+
+      <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-[8px] flex flex-col items-center justify-around gap-[4px]">
         {/* Sidebar opener arrow */}
         <div
-          className="w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md cursor-pointer border-[1px] hover:border-white"
+          className="w-[30px] border-white mycenter p-[4px] rounded-[6px] cursor-pointer border-[1px] hover:border-white"
           onClick={() => openSidebar()}
         >
           {open ? (
@@ -71,7 +76,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Notifications">
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "notification"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -103,7 +108,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Profile">
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "profile"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -131,7 +136,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Feeds">
           {/* Feed */}
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "feed"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -161,7 +166,7 @@ const Layout = ({ children }: any) => {
         {/* Roadmap */}
         <Tooltip content="Roadmap">
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "roadmap"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -191,7 +196,7 @@ const Layout = ({ children }: any) => {
         {/* Series */}
         <Tooltip content="Series">
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "series"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -222,7 +227,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Shows">
           {/* Show */}
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px]  border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "show"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -255,7 +260,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Communites">
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "community"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -290,7 +295,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Bookmarks">
           {/* Bookmark */}
           <div
-            className={`w-[30px] border-1 border-white rounder-md mycenter p-1 rounded-md  cursor-pointer ${
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "bookmark"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -319,10 +324,11 @@ const Layout = ({ children }: any) => {
       </nav>
       <div
         className={`bg-black transition-all ${
-          open ? "w-[400px] bdr-l " : "w-[0px] bdr-l "
+          open ? "w-[400px] bdr-l " : "w-[0px] bdr-l"
         } `}
       >
-        <header className="h-[50px] w-full flex items-center justify-between bg-grey px-3 bdr-b">
+        {/* Header */}
+        <div className="h-[50px] w-full flex items-center justify-between bg-grey px-[12px] bdr-b">
           <img
             src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683317102/showwcasexs/showwcaseXS_efwweq.png"
             alt="ShowwcaseXS header logo"
@@ -332,7 +338,10 @@ const Layout = ({ children }: any) => {
           <Tooltip content="Logout">
             <button
               onClick={() => {
-                localStorage.setItem("key", "");
+                localStorage.setItem("sxs_key", "");
+                if (!logout) {
+                  showSnackbar("Logged out successfully!", 3, "logout");
+                }
                 setLogout(true);
               }}
             >
@@ -354,7 +363,7 @@ const Layout = ({ children }: any) => {
               </svg>
             </button>
           </Tooltip>
-        </header>
+        </div>
         <SideBarStatusContext.Provider value={open}>
           <SetLogOutContext.Provider value={setLogout}>
             <LogOutContext.Provider value={logout}>
@@ -363,24 +372,31 @@ const Layout = ({ children }: any) => {
           </SetLogOutContext.Provider>
         </SideBarStatusContext.Provider>
 
+        {/* footer */}
         {open && (
-          <footer
-            className={`h-[30px] w-full text-white mycenter bg-grey px-3 bdr-t absolute bottom-0 right-0 bg-black `}
+          <div
+            className={`h-[30px] w-full text-white mycenter bg-grey px-[12px] bdr-t bdr-l absolute bottom-0 right-0 bg-black `}
           >
             <small className="">
               Made with &lt; 🧠 /&gt; by{" "}
               <a
                 href="https://twitter.com/PriteshKiri"
-                className="text-white sxs-link"
+                className="text-white sxs-link hover:underline"
               >
                 Pritesh Kiri
               </a>
             </small>
-          </footer>
+          </div>
         )}
       </div>
     </div>
   );
 };
 
-export { Layout, TabContext, LogOutContext, SetLogOutContext,SideBarStatusContext };
+export {
+  Layout,
+  TabContext,
+  LogOutContext,
+  SetLogOutContext,
+  SideBarStatusContext,
+};

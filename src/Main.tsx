@@ -1,18 +1,18 @@
 import { useContext, useEffect } from "react";
-import NotificationLayout from "./Layouts/NotificationLayout";
-import ProfileLayout from "./Layouts/ProfileLayout";
+import NotificationLayout from "./layouts/NotificationLayout";
+import ProfileLayout from "./layouts/ProfileLayout";
 import {
   LogOutContext,
   SetLogOutContext,
   SideBarStatusContext,
   TabContext,
-} from "./Layouts/Layout";
-import FeedLayout from "./Layouts/FeedLayout";
-import RoadmapLayout from "./Layouts/RoadmapLayout";
-import SeriesLayout from "./Layouts/SeriesLayout";
-import ShowLayout from "./Layouts/ShowLayout";
-import CommunityLayout from "./Layouts/CommunityLayout";
-import BookmarkLayout from "./Layouts/BookmarkLayout";
+} from "./layouts/Layout";
+import FeedLayout from "./layouts/FeedLayout";
+import RoadmapLayout from "./layouts/RoadmapLayout";
+import SeriesLayout from "./layouts/SeriesLayout";
+import ShowLayout from "./layouts/ShowLayout";
+import CommunityLayout from "./layouts/CommunityLayout";
+import BookmarkLayout from "./layouts/BookmarkLayout";
 
 const Main = (): any => {
   const tab: any = useContext(TabContext);
@@ -24,7 +24,7 @@ const Main = (): any => {
       setLogOut(true);
     }
 
-    console.log("onload main", logout);
+    // console.log("onload main", logout);
   }, []);
   const navTabs = [
     "profile",
@@ -37,17 +37,17 @@ const Main = (): any => {
     "bookmark",
   ];
 
-  console.log("main", logout);
+  // console.log("main", logout);
 
-  if (!localStorage.getItem("key") && open) {
-    console.log("nokey", localStorage.getItem("key"));
+  if (!localStorage.getItem("sxs_key") && open) {
+    // console.log("nokey", localStorage.getItem("sxs_key"));
     if (navTabs.includes(tab)) {
       return <ProfileLayout />;
     }
   }
 
-  if (localStorage.getItem("key") !== "" && open) {
-    console.log("key is", localStorage.getItem("key"));
+  if (localStorage.getItem("sxs_key") !== "" && open) {
+    // console.log("key is", localStorage.getItem("sxs_key"));
     if (tab === "profile") {
       return <ProfileLayout />;
     }
