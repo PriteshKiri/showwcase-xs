@@ -79,6 +79,8 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
               <a
                 href={`https://www.showwcase.com/show/${project?.id}/${project?.slug}`}
                 className="text-[12px] !text-white !visited:text-white ml-0 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {project?.title}
               </a>
