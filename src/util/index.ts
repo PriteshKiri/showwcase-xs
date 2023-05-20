@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 interface SnackbarProps {
   message: string;
   duration: number;
+  type: string;
 }
 
 const useSnackbar = () => {
@@ -20,8 +21,8 @@ const useSnackbar = () => {
     }
   }, [snackbar]);
 
-  function showSnackbar(message: string, duration: number) {
-    setSnackbar({ message, duration });
+  function showSnackbar(message: string, duration: number, type: string) {
+    setSnackbar({ message, duration, type });
   }
 
   return { snackbar, showSnackbar };

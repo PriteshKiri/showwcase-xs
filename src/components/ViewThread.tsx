@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import ThreadCard from "./ThreadCard";
+import ThreadCard from "./cards/ThreadCard";
 import { useSnackbar } from "../util";
-import SnackBar from "./SnackBar";
+import SnackBar from "./util/SnackBar";
+import Loader from "./util/Loader";
 
 const ViewThread = () => {
   const [threads, setThreads] = useState([]);
@@ -24,27 +25,22 @@ const ViewThread = () => {
     fetchFeeds();
   }, []);
   return (
-    <div className="flex flex-col items-center h-[83vh] mt-[10px] overflow-y-scroll">
-      {snackbar && <SnackBar message={snackbar.message} />}
+    <div className="flex flex-col items-center h-[83vh] pt-[10px] overflow-y-scroll">
+      {snackbar && <SnackBar message={snackbar.message} type={snackbar.type} />}
 
-      {Object.keys(threads).length ? (
+      {Object.keys(threads)?.length !== 0 ? (
         threads.map((thread) => {
           return <ThreadCard props={thread} showSnackbar={showSnackbar} />;
         })
       ) : (
-        <div className=" h-[100%] flex justify-center items-center p-[40px]">
-          <div
-            className="w-12 h-12 rounded-full animate-spin
-          border-y border-solid border-white border-t-transparent shadow-md"
-          ></div>
-        </div>
+        <Loader />
       )}
 
-      {Object.keys(threads).length ? (
+      {Object.keys(threads)?.length !== 0 ? (
         <div className="py-[15px]">
           <a
             href={`https://www.showwcase.com/${username}`}
-            className="sxs-link"
+            className="sxs-link hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >

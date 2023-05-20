@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSnackbar } from "../util";
-import SnackBar from "../components/SnackBar";
-import SeriesCard from "../components/SeriesCard";
+import SnackBar from "../components/util/SnackBar";
+import SeriesCard from "../components/cards/SeriesCard";
+import Loader from "../components/util/Loader";
 
 const SeriesLayout = () => {
   const [series, setSeries] = useState([]);
@@ -12,10 +13,7 @@ const SeriesLayout = () => {
       .then((response) => response.json())
       .then((response) => {
         if (!response.error) {
-          console.log(response);
           setSeries(response);
-        } else {
-          console.log(response.error, "err");
         }
       })
       .catch((err) => console.error(err));
@@ -23,32 +21,29 @@ const SeriesLayout = () => {
   return (
     <div className="overflow-y-scroll h-[91vh] flex flex-col">
       <div className="py-[15px] mycenter bdr-b ">
-        <h3>Explore our Trending Series</h3>
+        <p className="text-[14px] font-bold text-center">
+          Explore Trending Series
+        </p>
       </div>
-      {snackbar && <SnackBar message={snackbar.message} />}
+      {snackbar && <SnackBar message={snackbar.message} type={snackbar.type} />}
       <div className="flex flex-col h-[91vh]  overflow-y-scroll ">
         <div className="flex flex-col items-center justify-center p-[10px] gap-y-[10px]  ">
-          {Object.keys(series).length ? (
+          {Object.keys(series).length !== 0 ? (
             series.map((seriesItem) => {
               return (
                 <SeriesCard props={seriesItem} showSnackbar={showSnackbar} />
               );
             })
           ) : (
-            <div className="h-[91vh] flex justify-center items-center p-[40px]">
-              <div
-                className="w-12 h-12 rounded-full animate-spin
-border-y border-solid border-white border-t-transparent shadow-md"
-              ></div>
-            </div>
+            <Loader />
           )}
         </div>
 
-        {Object.keys(series).length ? (
+        {Object.keys(series).length !== 0 ? (
           <div className="pb-[15px] mycenter">
             <a
               href="https://www.showwcase.com/shows/series"
-              className="sxs-link"
+              className="sxs-link hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >

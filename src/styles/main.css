@@ -9,6 +9,10 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
+.app p {
+  color: white;
+}
+
 .mycenter {
   display: flex;
   justify-content: center;
@@ -78,4 +82,14 @@ li {
   -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.sxs-border-gradient {
+  border: double 3px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+    radial-gradient(circle at top left, #3b82f6, #0891b2);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  display: inline-block;
 }

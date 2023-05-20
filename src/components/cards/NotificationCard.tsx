@@ -24,17 +24,17 @@ const NotificationCard = ({ props }: any) => {
                 setImgErr(true);
               }}
               alt="User profile"
-              className="w-[40px] h-[40px] rounded-full absolute -left-[15px] -top-[20px] border-2 border-[#4f4f4f] bg-[#4f4f4f]"
+              className="w-[40px] h-[40px] rounded-full absolute -left-[15px] -top-[20px] border-[2px] border-[#4f4f4f] bg-[#4f4f4f]"
             />
           ) : (
             <img
               src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683316744/showwcasexs/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black_gboe9d.png"
               alt="User profile"
-              className="w-[40px] h-[40px] rounded-full absolute -left-[15px] -top-[20px] border-2 border-[#4f4f4f] bg-[#4f4f4f]"
+              className="w-[40px] h-[40px] rounded-full absolute -left-[15px] -top-[20px] border-[2px] border-[#4f4f4f] bg-[#4f4f4f]"
             />
           )}
 
-          <div className="bdr-all p-2 bg-[#1a1a1b]  rounded-md w-full flex flex-col">
+          <div className="bdr-all p-[8px] bg-[#1a1a1b]  rounded-[6px] w-full flex flex-col">
             <div className="p-[12px]">
               {type === "new_thread_upvote" ? (
                 <p className=" text-[12px] flex items-center flex-wrap">
@@ -55,7 +55,7 @@ const NotificationCard = ({ props }: any) => {
                   </svg>
                   <a
                     href={`https://www.showwcase.com/${initiators[0]?.username}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -64,7 +64,7 @@ const NotificationCard = ({ props }: any) => {
                   upvoted your{" "}
                   <a
                     href={`https://www.showwcase.com/thread/${data?.thread?.id}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -93,7 +93,7 @@ const NotificationCard = ({ props }: any) => {
                   </svg>
                   <a
                     href={`https://www.showwcase.com/${initiators[0]?.username}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -102,7 +102,7 @@ const NotificationCard = ({ props }: any) => {
                   boosted your{" "}
                   <a
                     href={`https://www.showwcase.com/thread/${data?.thread?.id}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -131,7 +131,7 @@ const NotificationCard = ({ props }: any) => {
                   </svg>
                   <a
                     href={`https://www.showwcase.com/${initiators[0]?.username}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -140,7 +140,7 @@ const NotificationCard = ({ props }: any) => {
                   replied to your{" "}
                   <a
                     href={`https://www.showwcase.com/thread/${data?.thread?.id}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -167,7 +167,7 @@ const NotificationCard = ({ props }: any) => {
                   </svg>
                   <a
                     href={`https://www.showwcase.com/${initiators[0]?.username}`}
-                    className="sxs-link text-[12px] mx-[5px] my-[0px]"
+                    className="sxs-link text-[12px] mx-[5px] my-[0px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -185,7 +185,7 @@ const NotificationCard = ({ props }: any) => {
             {type !== "new_follower" && (
               <div className="bdr-t px-[15px]">
                 {type === "new_reply" && data?.reply?.message && (
-                  <p className="pb-[7px] pt-[12px] text-[12px]">
+                  <p className="pb-[8px] pt-[12px] text-[12px]">
                     {data?.reply?.message}
                   </p>
                 )}
@@ -194,13 +194,15 @@ const NotificationCard = ({ props }: any) => {
                     {data?.reply?.title}
                   </p>
                 )}
-                {type === "new_reply" && data?.reply?.images && (
-                  <img
-                    src={data?.reply?.images[0]}
-                    className=" pb-[7px] pt-[12px] w-full rounded-md"
-                    alt=""
-                  ></img>
-                )}
+                {type === "new_reply" &&
+                  data?.reply?.images !== undefined &&
+                  data?.reply?.images?.length !== 0 && (
+                    <img
+                      src={data?.reply?.images[0]}
+                      className=" pb-[7px] pt-[12px] w-full rounded-md"
+                      alt=""
+                    ></img>
+                  )}
                 {type === "new_reply" && data?.reply?.gif && (
                   <img
                     src={data?.reply?.gif?.big?.url}

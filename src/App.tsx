@@ -1,4 +1,4 @@
-import { Layout } from "./Layouts/Layout";
+import { Layout } from "./layouts/Layout";
 import Main from "./Main";
 
 function App(props: any) {

@@ -3,7 +3,7 @@ import { useState } from "react";
 const CommunityCard = ({ props }: any) => {
   const [imgErr, setImgErr] = useState(false);
   return (
-    <div className="w-[45%] bdr-all rounded-md p-4 flex flex-col justify-start items-center">
+    <div className="w-[45%] bdr-all rounded-[6px] p-4 flex flex-col justify-start items-center">
       {!imgErr && props?.pictureUrl ? (
         <img
           src={props?.pictureUrl}
@@ -11,13 +11,13 @@ const CommunityCard = ({ props }: any) => {
             setImgErr(true);
           }}
           alt="User profile"
-          className="w-[40px] h-[40px] rounded-md my-2"
+          className="w-[40px] h-[40px] rounded-[6px] my-[8px] bg-[#4f4f4f] border border-[2px] border-[#4f4f4f]"
         />
       ) : (
         <img
           src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683316744/showwcasexs/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black_gboe9d.png"
           alt="User profile"
-          className="w-[40px] h-[40px] rounded-md my-2 bg-[#1e3b57]"
+          className="w-[40px] h-[40px] rounded-[6px] my-[8px] bg-[#4f4f4f] border border-[2px] border-[#4f4f4f]"
         />
       )}
 
@@ -41,22 +41,22 @@ const CommunityCard = ({ props }: any) => {
           <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
         </svg>
 
-        <p className="pb-2 ml-[10px] text-[12px] font-bold">
-          {props.totalMembers}
+        <p className="pb-[8px] ml-[10px] text-[12px] font-bold">
+          {props?.totalMembers}
         </p>
       </div>
 
       <p className="text-[12px] text-center w-full pb-[10px] justify-center">
-        {props.name}
+        {props?.name}
       </p>
 
       <a
-        href={`https://www.showwcase.com/community/${props.slug}`}
+        href={`https://www.showwcase.com/community/${props?.slug}`}
         target="_blank"
         rel="noopener noreferrer"
         className="m-[0px]"
       >
-        <button className="bdr-all no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white">
+        <button className="bdr-all no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588] cursor-pointer">
           Explore
         </button>
       </a>

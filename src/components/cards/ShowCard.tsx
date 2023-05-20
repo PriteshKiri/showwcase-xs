@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { copyToClipboard } from "../util";
+import { useState } from "react";
+import { copyToClipboard } from "../../util";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -10,12 +10,12 @@ const ShowCard = ({ props, showSnackbar }: any) => {
     copyToClipboard(
       `https://www.showwcase.com/show/${props?.id}/${props?.slug}`
     );
-    showSnackbar("Link copied to your clipboard", 3);
+    showSnackbar("Show link copied to clipboard!", 3, "clipboard");
   }
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-2 px-2">
       <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img
               src={props?.user?.profilePictureUrl}
@@ -38,12 +38,12 @@ const ShowCard = ({ props, showSnackbar }: any) => {
               href={`https://www.showwcase.com/${props?.user?.username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] text-white visited:text-white ml-0"
+              className="text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
             >
               {props?.user?.displayName}
             </a>
             {props?.readingStats && (
-              <p className="text-[12px] text-slate-400">{`${props?.readingStats?.text}`}</p>
+              <p className="text-[12px] !text-slate-400">{`${props?.readingStats?.text}`}</p>
             )}
           </div>
         </div>
@@ -69,16 +69,18 @@ const ShowCard = ({ props, showSnackbar }: any) => {
         </p>
       </div>
       <div className="show-content p-[10px]">
-        <h4 className="text-left text-[12px] bold py-[10px]">{props?.title}</h4>
+        <p className="text-left text-[12px] bold py-[10px] font-bold">
+          {props?.title}
+        </p>
         {props?.projectSummary ? (
-          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-md">
+          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px]">
             <ReactMarkdown
               children={props?.projectSummary}
               remarkPlugins={[remarkGfm]}
             />
           </p>
         ) : props?.seo?.description ? (
-          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-md">
+          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px]">
             <ReactMarkdown
               children={props?.seo?.description}
               remarkPlugins={[remarkGfm]}
@@ -95,13 +97,13 @@ const ShowCard = ({ props, showSnackbar }: any) => {
             rel="noopener noreferrer"
             className="m-[0px]"
           >
-            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white hover:bg-[#366588]">
+            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]">
               Read now
             </button>
           </a>
 
           <button
-            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white hover:bg-[#366588]"
+            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
             onClick={handleClick}
           >
             Share

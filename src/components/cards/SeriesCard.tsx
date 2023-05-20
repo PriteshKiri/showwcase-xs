@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { copyToClipboard } from "../util";
+import { useState } from "react";
+import { copyToClipboard } from "../../util";
 
 const SeriesCard = ({ props, showSnackbar }: any) => {
   const [imgErr, setImgErr] = useState(false);
@@ -10,12 +10,12 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
     copyToClipboard(
       `https://www.showwcase.com/series/${props?.id}/${props?.slug}`
     );
-    showSnackbar("Link copied to your clipboard", 3);
+    showSnackbar("Series link copied to clipboard!", 3, "clipboard");
   }
   return (
-    <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-2 px-2">
+    <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-[8px] px-[8px]">
       <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img
               src={props?.user?.profilePictureUrl}
@@ -38,11 +38,11 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
               href={`https://www.showwcase.com/${props?.user?.username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] text-white visited:text-white ml-0"
+              className="text-[14px] !text-white !visited:text-white ml-0 hover:underline"
             >
               {props?.user?.displayName}
             </a>
-            <p className="text-[12px] text-slate-400">{`${props?.projects?.length} Shows`}</p>
+            <p className="text-[12px] !text-slate-400">{`${props?.projects?.length} Shows`}</p>
           </div>
         </div>
         <p className="p-[4px] flex items-center gap-x-[10px] text-[12px] capitalize">
@@ -69,20 +69,20 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
         </p>
       </div>
       <div className="series-content p-[10px]">
-        <h4 className="text-center text-[#d09d13] uppercase tracking-[4px] text-[14px] py-[15px]">
+        <p className="text-center !text-[#d09d13] uppercase tracking-[4px] text-[14px] py-[15px]">
           {props?.title}
-        </h4>
+        </p>
 
         {showProjects.map((project: any): any => {
           return (
-            <div className="p-[5px] pl-[10px]  bdr-l bdr-b rounded-bl-md">
+            <div className="p-[5px] pl-[10px]  bdr-l bdr-b rounded-bl-[6px]">
               <a
                 href={`https://www.showwcase.com/show/${project?.id}/${project?.slug}`}
-                className="text-[12px] text-white visited:text-white ml-0"
+                className="text-[12px] !text-white !visited:text-white ml-0 hover:underline"
               >
                 {project?.title}
               </a>
-              <p className="text-[10px] text-slate-400 ">
+              <p className="text-[10px] !text-slate-400 ">
                 {project?.readingStats?.text}
               </p>
             </div>
@@ -96,13 +96,13 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
             rel="noopener noreferrer"
             className="m-[0px]"
           >
-            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white hover:bg-[#366588]">
+            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]">
               Enroll now
             </button>
           </a>
 
           <button
-            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-md text-[12px] py-2 text-white visited:text-white hover:bg-[#366588]"
+            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
             onClick={handleClick}
           >
             Share
