@@ -37,7 +37,7 @@ const NotificationLayout = () => {
         )}
 
         {Object.keys(notifications)?.length !== 0 ? (
-          <div className="py-[15px]">
+          <div className="pb-[35px] bt-[5px]">
             <a
               href="https://www.showwcase.com/notifications"
               className="sxs-link hover:underline"

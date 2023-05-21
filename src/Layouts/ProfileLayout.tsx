@@ -15,10 +15,13 @@ const ProfileLayout = () => {
 
   useEffect(() => {
     if (
-      localStorage.getItem("sxs_key") !== "" &&
-      localStorage.getItem("sxs_key") !== null
+      localStorage.getItem("sxs_key") !== "" ||
+      localStorage.getItem("sxs_key") !== null ||
+      localStorage.getItem("sxs_key") !== undefined
     ) {
       setFetchMode(true);
+
+      console.log("fetch mode on");
     } else {
       setLogOut(true);
       setFetchMode(false);
@@ -27,14 +30,22 @@ const ProfileLayout = () => {
   }, []);
 
   useEffect(() => {
-    if (logout) {
+    if (
+      localStorage.getItem("sxs_key") === "" ||
+      localStorage.getItem("sxs_key") === null ||
+      localStorage.getItem("sxs_key") === undefined
+    ) {
+      // console.log("This should not");
+
       setFetchMode(false);
     }
   }, [logout]);
 
   useEffect(() => {
+    // console.log("I am in usee effect and fecth mnode is:", fetchMode);
     // console.log(localStorage.getItem("sxs_key"));
     if (fetchMode) {
+      // console.log("in feetch");
       fetch("https://cache.showwcase.com/auth", {
         method: "GET",
         headers: {
@@ -93,7 +104,7 @@ const ProfileLayout = () => {
               Please enter your API key to login.
             </p>
 
-            <small className="text-center">
+            <small className="text-center text-[11px]">
               Click{" "}
               <a
                 className="sxs-link hover:underline"
@@ -118,7 +129,7 @@ const ProfileLayout = () => {
                 <input
                   value={inputKey}
                   onChange={(e) => setInputKey(e.target.value)}
-                  className=" w-[80%] !bg-gray-700 !text-white !outline-0  border border-gray-300 text-gray-900 text-sm rounded-[8px] focus:!ring-blue-500 focus:!border-blue-500 block  p-[10px] border-gray-600 placeholder-gray-400 mt-[25px]"
+                  className=" w-[80%] !bg-gray-700 !text-white !outline-0  border border-gray-300 text-gray-900 text-sm rounded-[8px] focus:!ring-blue-500 focus:!border-blue-500 block  p-[10px] border-gray-600 !placeholder:gray-400 !placeholder:[14px] mt-[25px]"
                   placeholder="Enter your API key"
                 />
 

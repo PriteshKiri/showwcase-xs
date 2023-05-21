@@ -17,9 +17,17 @@ const Layout = ({ children }: any) => {
     setOpen(!open);
   };
 
-  // useEffect(() => {
-  //   console.log("Layout component logout status", logout);
-  // }, [logout]);
+  useEffect(() => {
+    if (
+      localStorage.getItem("sxs_key") === "" ||
+      localStorage.getItem("sxs_key") === null ||
+      localStorage.getItem("sxs_key") === undefined
+    ) {
+      setOpen(false);
+    } else {
+      setOpen(false);
+    }
+  }, []);
 
   return (
     <div
@@ -30,7 +38,7 @@ const Layout = ({ children }: any) => {
       <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-[8px] flex flex-col items-center justify-around gap-[4px]">
         {/* Sidebar opener arrow */}
         <div
-          className="w-[30px] border-white mycenter p-[4px] rounded-[6px] cursor-pointer border-[1px] hover:border-white"
+          className="w-[30px] bdr-white-all mycenter p-[4px] rounded-[6px] cursor-pointer  hover:!border-white"
           onClick={() => openSidebar()}
         >
           {open ? (
@@ -377,7 +385,7 @@ const Layout = ({ children }: any) => {
           <div
             className={`h-[30px] w-full text-white mycenter bg-grey px-[12px] bdr-t bdr-l absolute bottom-0 right-0 bg-black `}
           >
-            <small className="">
+            <small className="text-[11px]">
               Made with &lt; 🧠 /&gt; by{" "}
               <a
                 href="https://twitter.com/PriteshKiri"

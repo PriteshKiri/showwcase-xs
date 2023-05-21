@@ -116,7 +116,7 @@ const WriteThread = () => {
 
       <div className="p-[15px] bdr-all rounded-[6px]">
         <input
-          className="shadow-sm mb-[15px] !border-[1px] !outline-0 !border-gray-500 !text-gray-900 rounded-[8px] block w-full p-2.5 !bg-gray-700 placeholder-gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
+          className="shadow-sm mb-[15px] !border-[1px] !outline-0 !border-gray-500 !text-gray-900 rounded-[8px] block w-full p-2.5 !bg-gray-700 !placeholder:gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
           placeholder="Write title for your thread"
           value={title}
           onChange={(e) => {
@@ -129,7 +129,7 @@ const WriteThread = () => {
           rows={15}
           ref={inputRef}
           required
-          className=" block !p-[10px] !min-h-[300px] w-full !outline-0  !bg-gray-700 !rounded-[8px] !border-[1px] !border-gray-500  !placeholder-gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
+          className=" block !p-[10px] !min-h-[300px] w-full !outline-0  !bg-gray-700 !rounded-[8px] !border-[1px] !border-gray-500  !placeholder:gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
           placeholder="Write thread..."
           onChange={(e) => {
             setIsVoiceTypingEnabled(false);
