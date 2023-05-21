@@ -15,7 +15,12 @@
     "128": "images/sxs-128x128.png"
   },
 
-  "permissions": ["tabs", "contextMenus", "scripting"],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite",
+    "speechRecognition"
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; unsafe-inline ; object-src 'self'"
   }
