@@ -13,7 +13,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
 
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] my-[8px] px-[8px]">
-      <div className="top w-full flex justify-between items-center pt-[8px] px-[8px] bdr-b">
+      <div className="top w-full flex justify-between items-center py-[10px] px-[8px] bdr-b">
         <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img

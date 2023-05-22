@@ -9,7 +9,7 @@ const SetLogOutContext = createContext<
   React.Dispatch<React.SetStateAction<boolean>> | undefined
 >(undefined);
 const Layout = ({ children }: any) => {
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
   const [tab, setTab] = useState<string>("profile");
   const [logout, setLogout] = useState<boolean | any>(false);
   const { snackbar, showSnackbar }: any = useSnackbar();

@@ -38,7 +38,7 @@ const ShowLayout = () => {
         </div>
 
         {Object.keys(shows).length !== 0 ? (
-          <div className="pb-[15px] mycenter">
+          <div className="pb-[25px] pt-[10px] mycenter">
             <a
               href="https://www.showwcase.com/"
               className="sxs-link hover:underline"

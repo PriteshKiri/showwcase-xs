@@ -31,7 +31,7 @@ const CommunityLayout = () => {
           )}
         </div>
         {Object.keys(communities)?.length !== 0 ? (
-          <div className="py-[15px] mycenter">
+          <div className="py-[25px] mycenter">
             <a
               href="https://www.showwcase.com/communities"
               className="sxs-link hover:underline"
