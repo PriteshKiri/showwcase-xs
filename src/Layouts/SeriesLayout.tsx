@@ -40,7 +40,7 @@ const SeriesLayout = () => {
         </div>
 
         {Object.keys(series).length !== 0 ? (
-          <div className="pb-[15px] mycenter">
+          <div className="pb-[25px] pt-[5px] mycenter">
             <a
               href="https://www.showwcase.com/shows/series"
               className="sxs-link hover:underline"

@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { LogOutContext, SetLogOutContext } from "./Layout";
 import Loader from "../components/util/Loader";
-import { useSnackbar } from "../util";
+import { copyToClipboard, useSnackbar } from "../util";
 import SnackBar from "../components/util/SnackBar";
 
 const ProfileLayout = () => {
   const [inputKey, setInputKey]: any = useState("");
   const [fetchMode, setFetchMode] = useState(false);
-
   const [userDetails, setUserDetails]: any = useState({});
   const logout: any = useContext(LogOutContext);
   const setLogOut: any = useContext(SetLogOutContext);
@@ -251,16 +250,23 @@ const ProfileLayout = () => {
                     </button>
                   </a>
 
-                  <a
-                    className="font-bold text-white no-underline hover-text-white visited:text-white w-[45%] mx-0"
-                    href="https://www.showwcase.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bdr-all bg-[#4595d0] py-[8px] px-[12px] rounded-[6px] text-white font-bold w-full text-[12px] hover:bg-[#366588]">
-                      Invite
+                  <div className="font-bold text-white no-underline hover-text-white visited:text-white w-[45%] mx-0">
+                    <button
+                      className="bdr-all bg-[#4595d0] py-[8px] px-[12px] rounded-[6px] text-white font-bold w-full text-[12px] hover:bg-[#366588]"
+                      onClick={() => {
+                        copyToClipboard(
+                          `https://www.showwcase.com/${userDetails.username}`
+                        );
+                        showSnackbar(
+                          "Profile link copied to clipboard!",
+                          3,
+                          "clipboard"
+                        );
+                      }}
+                    >
+                      Share profile
                     </button>
-                  </a>
+                  </div>
                 </div>
               </div>
             </>

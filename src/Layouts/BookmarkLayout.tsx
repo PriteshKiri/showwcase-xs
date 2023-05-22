@@ -43,7 +43,7 @@ const BookmarkLayout = () => {
         )}
 
         {Object.keys(bookmarkThreads)?.length !== 0 ? (
-          <div className="py-[15px]">
+          <div className="pt-[15px] pb-[25px]">
             <a
               href="https://www.showwcase.com/bookmarks"
               className="sxs-link hover:underline"
