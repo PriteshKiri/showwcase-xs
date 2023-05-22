@@ -144,7 +144,7 @@ const ProfileLayout = () => {
                   </button>
                   <button
                     className={`text-[14px] bdr-all cursor-pointer ${
-                      inputKey
+                      inputKey.trim()
                         ? "bg-[#4595d0] hover:bg-[#366588] "
                         : "bg-gray-700"
                     } py-[8px] px-[12px] rounded-[6px]`}
