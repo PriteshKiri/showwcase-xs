@@ -117,7 +117,7 @@ const WriteThread = () => {
       <div className="p-[15px] bdr-all rounded-[6px]">
         <input
           className="shadow-sm mb-[15px] !border-[1px] !outline-0 !border-gray-500 !text-gray-900 rounded-[8px] block w-full p-2.5 !bg-gray-700 !placeholder:gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
-          placeholder="Write title for your thread"
+          placeholder="Write title for your thread (optional)"
           value={title}
           onChange={(e) => {
             setTitle(e.target.value);
@@ -142,7 +142,7 @@ const WriteThread = () => {
       <div className="flex justify-center gap-x-[15px] py-[15px]">
         <button
           className={` ${
-            title.trim() || thread.trim()
+            title.trim() || thread.trim() || ongoingTranscript.trim()
               ? "bg-[#4595d0] hover:bg-[#366588] "
               : "bg-gray-700"
           }
@@ -150,7 +150,11 @@ const WriteThread = () => {
           onClick={() => {
             setPost(true);
           }}
-          disabled={title.trim() || thread.trim() ? false : true}
+          disabled={
+            title.trim() || thread.trim() || ongoingTranscript.trim()
+              ? false
+              : true
+          }
         >
           Post
         </button>

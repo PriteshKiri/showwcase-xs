@@ -20,7 +20,7 @@ const ProfileLayout = () => {
     ) {
       setFetchMode(true);
 
-      console.log("fetch mode on");
+      // console.log("fetch mode on");
     } else {
       setLogOut(true);
       setFetchMode(false);
@@ -91,7 +91,7 @@ const ProfileLayout = () => {
             <div className="mycenter sxs-border-gradient mt-[100px]">
               <img
                 src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1684524896/showwcasexs/SXS_-_500x500_r2isz7.png"
-                className="w-[120px] p-[15px] rounded-[50%]"
+                className="w-[120px] p-[15px] h-[120px] rounded-[50%]"
                 alt=""
               />
             </div>
