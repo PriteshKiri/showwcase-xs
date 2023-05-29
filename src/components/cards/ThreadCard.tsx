@@ -6,6 +6,8 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
   const [imgErr, setImgErr] = useState(false);
   const { message } = props;
 
+  console.log(props?.linkPreviewMeta);
+
   function handleClick() {
     copyToClipboard(`https://www.showwcase.com/thread/${props?.id}`);
     showSnackbar("Thread link copied to clipboard!", 3, "clipboard");
@@ -91,7 +93,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         )}
 
         {props?.linkPreviewMeta !== "null" &&
-        props?.linkPreviewMeta.type === "external" ? (
+        props?.linkPreviewMeta?.type === "external" ? (
           <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-full flex flex-col  justify-center items-center">
             {props?.linkPreviewMeta.images && (
               <img
