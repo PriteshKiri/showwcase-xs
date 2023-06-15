@@ -80,6 +80,45 @@
   color: #3c82f6;
 }
 
+#showContent code {
+  color: #9d9d9d;
+  font-size: 10px;
+  padding: 10px;
+  width: 380px;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+#showContent p,
+#showContent a,
+#showContent li {
+  font-size: 12px;
+  margin: 15px 5px;
+  word-break: break-word;
+}
+
+#showContent h1,
+#showContent h2,
+#showContent h3 {
+  font-size: 13px;
+  margin: 15px 5px;
+  font-weight: bold;
+  word-break: break-word;
+  font-style: italic;
+  color: #79c1fd;
+}
+
+#showContent ul {
+  font-size: 12px;
+  margin: 15px 15px;
+  word-break: break-word;
+  list-style-type: circle;
+}
+
+#showContent a {
+  color: #3c82f6;
+}
+
 .truncate-2 {
   overflow: hidden;
   display: -webkit-box;

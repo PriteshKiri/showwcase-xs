@@ -3,7 +3,7 @@ import { copyToClipboard } from "../../util";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
 
-const ShowCard = ({ props, showSnackbar }: any) => {
+const ShowCard = ({ props, showSnackbar, setShowView, setShowID }: any) => {
   const [imgErr, setImgErr] = useState(false);
 
   function handleClick() {
@@ -12,6 +12,11 @@ const ShowCard = ({ props, showSnackbar }: any) => {
     );
     showSnackbar("Show link copied to clipboard!", 3, "clipboard");
   }
+
+  const handleShowRead = (id: any) => {
+    setShowView(true);
+    setShowID(id);
+  };
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-2 px-2">
       <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
@@ -65,7 +70,7 @@ const ShowCard = ({ props, showSnackbar }: any) => {
             <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
             <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
           </svg>
-          {props?.totalViews}
+          {props?.views}
         </p>
       </div>
       <div className="show-content p-[10px]">
@@ -91,16 +96,14 @@ const ShowCard = ({ props, showSnackbar }: any) => {
         )}
 
         <div className="flex justify-start items-center  my-[5px]">
-          <a
-            href={`https://www.showwcase.com/show/${props?.id}/${props?.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="m-[0px]"
-          >
-            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]">
+          <div className="m-[0px]">
+            <button
+              onClick={() => handleShowRead(props?.id)}
+              className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
+            >
               Read now
             </button>
-          </a>
+          </div>
 
           <button
             className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
