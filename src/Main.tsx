@@ -13,6 +13,7 @@ import SeriesLayout from "./layouts/SeriesLayout";
 import ShowLayout from "./layouts/ShowLayout";
 import CommunityLayout from "./layouts/CommunityLayout";
 import BookmarkLayout from "./layouts/BookmarkLayout";
+import JobLayout from "./layouts/JobLayout";
 
 const Main = (): any => {
   const tab: any = useContext(TabContext);
@@ -68,6 +69,9 @@ const Main = (): any => {
     }
     if (tab === "community") {
       return <CommunityLayout />;
+    }
+    if (tab === "job") {
+      return <JobLayout />;
     }
     if (tab === "bookmark") {
       return <BookmarkLayout />;

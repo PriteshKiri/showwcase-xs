@@ -35,7 +35,7 @@ const Layout = ({ children }: any) => {
     >
       {snackbar && <SnackBar message={snackbar.message} type={snackbar.type} />}
 
-      <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[340px] rounded-l-[8px] flex flex-col items-center justify-around gap-[4px]">
+      <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[380px] rounded-l-[8px] flex flex-col items-center justify-around gap-[4px]">
         {/* Sidebar opener arrow */}
         <div
           className="w-[30px] bdr-white-all mycenter p-[4px] rounded-[6px] cursor-pointer  hover:!border-white"
@@ -297,6 +297,61 @@ const Layout = ({ children }: any) => {
               <line x1="6.7" y1="17.8" x2="9.5" y2="15.8" />
               <line x1="17.3" y1="17.8" x2="14.5" y2="15.8" />
             </svg>
+          </div>
+        </Tooltip>
+
+        <Tooltip content="Jobs">
+          <div
+            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+              tab === "job"
+                ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
+                : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
+            } `}
+            onClick={() => setTab("job")}
+          >
+            {" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-building w-[20px] h-[20px] "
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 21l18 0" />
+              <path d="M9 8l1 0" />
+              <path d="M9 12l1 0" />
+              <path d="M9 16l1 0" />
+              <path d="M14 8l1 0" />
+              <path d="M14 12l1 0" />
+              <path d="M14 16l1 0" />
+              <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+            </svg>
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-building w-[20px] h-[20px] "
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="5" r="2" />
+              <circle cx="5" cy="19" r="2" />
+              <circle cx="19" cy="19" r="2" />
+              <circle cx="12" cy="14" r="3" />
+              <line x1="12" y1="7" x2="12" y2="11" />
+              <line x1="6.7" y1="17.8" x2="9.5" y2="15.8" />
+              <line x1="17.3" y1="17.8" x2="14.5" y2="15.8" />
+            </svg> */}
           </div>
         </Tooltip>
 

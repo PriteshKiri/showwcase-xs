@@ -105,7 +105,13 @@
   font-weight: bold;
   word-break: break-word;
   font-style: italic;
-  color: #79c1fd;
+  color: #79c1fd !important;
+}
+
+#showContent h1 span,
+#showContent h2 span,
+#showContent h3 span {
+  color: #79c1fd !important;
 }
 
 #showContent ul {

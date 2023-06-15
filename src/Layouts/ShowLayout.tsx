@@ -9,6 +9,7 @@ const ShowLayout = () => {
   const [showId, setShowID] = useState("");
   const [showView, setShowView] = useState(false);
   const [showContent, setShowContent]: any = useState();
+  const [imgErr, setImgErr] = useState(false);
 
   useEffect(() => {
     fetch("https://cache.showwcase.com/projects/trending")
@@ -28,7 +29,7 @@ const ShowLayout = () => {
         .then((response) => {
           if (!response.error) {
             setShowContent(response);
-            
+            console.log(Object.keys(response));
           }
         })
         .catch((err) => console.error(err));
@@ -93,6 +94,62 @@ const ShowLayout = () => {
               </svg>
             </a>
           </div>
+
+          <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
+            <div className="flex items-center gap-[8px]">
+              {!imgErr && showContent?.user?.profilePictureUrl ? (
+                <img
+                  src={showContent?.user?.profilePictureUrl}
+                  onError={() => {
+                    setImgErr(true);
+                  }}
+                  alt="User profile"
+                  className="w-[40px] h-[40px] rounded-full bg-[#1e3b57]"
+                />
+              ) : (
+                <img
+                  src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683316744/showwcasexs/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black_gboe9d.png"
+                  alt="User profile"
+                  className="w-[40px] h-[40px] rounded-full"
+                />
+              )}
+
+              <div>
+                <a
+                  href={`https://www.showwcase.com/${showContent?.user?.username}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
+                >
+                  {showContent?.user?.displayName}
+                </a>
+                {showContent?.readingStats && (
+                  <p className="text-[12px] !text-slate-400">{`${showContent?.readingStats?.text}`}</p>
+                )}
+              </div>
+            </div>
+            <p className="p-[4px] w-[60px] justify-start flex items-center gap-x-[10px] text-[10px] capitalize">
+              {" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-user bg-[#23545e] rounded-full p-[3px] w-[18px] h-[18px] "
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="#4ca9af"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+              </svg>
+              {showContent?.views}
+            </p>
+          </div>
+
           <div className="flex flex-col p-[10px] pb-[20px]">
             {showContent?.coverImageUrl && (
               <img
@@ -104,11 +161,25 @@ const ShowLayout = () => {
             <p className="text-[14px] font-bold text-center py-[6px]">
               {showContent?.title}{" "}
             </p>
+
             {showContent?.projectSummary && (
               <p className="text-[10px] text-center py-[6px]">
                 {showContent?.projectSummary}{" "}
               </p>
             )}
+            <div className="w-full flex justify-between items-center pt-[15px]">
+              {showContent?.category && (
+                <div className="py-[5px] px-[12px] rounded-[6px] bg-[#289ddfc9] capitalize text-[#e4e4e4] text-[12px]">
+                  {showContent?.category}
+                </div>
+              )}{" "}
+              {showContent?.readingStats?.text && (
+                <p className="text-[12px] !text-slate-400">
+                  {showContent?.readingStats?.text}
+                </p>
+              )}
+            </div>
+
             <p className="py-1 bdr-b"></p>
 
             {showContent?.content[0]?.lexicalBlock?.html && (
