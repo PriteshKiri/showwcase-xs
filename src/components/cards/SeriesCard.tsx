@@ -14,7 +14,7 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
   }
   return (
     <div className="bdr-all w-[95%] bg-[#1a1a1b] flex flex-col my-[8px] px-[8px]">
-      <div className="top w-full flex justify-between items-center pt-[15px] px-[10px] ">
+      <div className="top flex justify-between items-center pt-[15px] px-[10px] ">
         <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img
@@ -38,7 +38,7 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
               href={`https://www.showwcase.com/${props?.user?.username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] !text-white !visited:text-white ml-0 hover:underline"
+              className="no-underline pt-[5px] text-[14px] !text-white !visited:text-white ml-0 hover:underline"
             >
               {props?.user?.displayName}
             </a>
@@ -49,7 +49,7 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[3px] w-[18px] h-[18px] "
+            className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[3px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"
@@ -78,13 +78,13 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
             <div className="p-[5px] pl-[10px]  bdr-l bdr-b rounded-bl-[6px]">
               <a
                 href={`https://www.showwcase.com/show/${project?.id}/${project?.slug}`}
-                className="text-[12px] !text-white !visited:text-white ml-0 hover:underline"
+                className="no-underline text-[12px] !text-white !visited:text-white ml-0 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {project?.title}
               </a>
-              <p className="text-[10px] !text-slate-400 ">
+              <p className="text-[10px] !text-slate-400 pt-[5px]">
                 {project?.readingStats?.text}
               </p>
             </div>
@@ -98,13 +98,13 @@ const SeriesCard = ({ props, showSnackbar }: any) => {
             rel="noopener noreferrer"
             className="m-[0px]"
           >
-            <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]">
+            <button className="border-none cursor-pointer bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]">
               Enroll now
             </button>
           </a>
 
           <button
-            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
+            className="border-none m-[0px] ml-[10px] cursor-pointer no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
             onClick={handleClick}
           >
             Share
