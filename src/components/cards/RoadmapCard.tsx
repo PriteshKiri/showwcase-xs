@@ -15,7 +15,9 @@ const RoadmapCard = ({ props, showSnackbar }: any) => {
       }}
     >
       <p className="text-[16px] font-bold pb-[16px]">{props?.title}</p>
-      <p className="text-[12px] pb-[16px]">{props?.description}</p>
+      <p className="text-[12px] pb-[16px] leading-[20px]">
+        {props?.description}
+      </p>
       <div className="flex justify-start items-center ">
         <a
           href={`https://www.showwcase.com/roadmap/${props?.id}/${props?.slug}`}
@@ -23,13 +25,13 @@ const RoadmapCard = ({ props, showSnackbar }: any) => {
           rel="noopener noreferrer"
           className="m-[0px]"
         >
-          <button className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[4px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588] cursor-pointer">
+          <button className="border-none bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[4px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588] cursor-pointer">
             Enroll now
           </button>
         </a>
 
         <button
-          className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[4px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588] cursor-pointer"
+          className="border-none m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[4px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588] cursor-pointer"
           onClick={() => handleClick()}
         >
           Share
