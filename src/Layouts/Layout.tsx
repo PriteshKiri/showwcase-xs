@@ -38,7 +38,7 @@ const Layout = ({ children }: any) => {
       <nav className="absolute py-[10px] top-[50px] -left-[50px] w-[50px] bg-black h-[380px] rounded-l-[8px] flex flex-col items-center justify-around gap-[4px]">
         {/* Sidebar opener arrow */}
         <div
-          className="w-[30px] bdr-white-all mycenter p-[4px] rounded-[6px] cursor-pointer  hover:!border-white"
+          className="w-[20px] bdr-white-all mycenter p-[4px] rounded-[6px] cursor-pointer  hover:!border-white"
           onClick={() => openSidebar()}
         >
           {open ? (
@@ -84,7 +84,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Notifications">
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "notification"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -116,7 +116,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Profile">
           <div
-            className={`w-[30px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "profile"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -144,7 +144,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Feeds">
           {/* Feed */}
           <div
-            className={`w-[30px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "feed"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -174,7 +174,7 @@ const Layout = ({ children }: any) => {
         {/* Roadmap */}
         <Tooltip content="Roadmap">
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "roadmap"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -204,7 +204,7 @@ const Layout = ({ children }: any) => {
         {/* Series */}
         <Tooltip content="Series">
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "series"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -235,7 +235,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Shows">
           {/* Show */}
           <div
-            className={`w-[30px]  border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px]  border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "show"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -268,7 +268,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Communites">
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "community"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -302,7 +302,7 @@ const Layout = ({ children }: any) => {
 
         <Tooltip content="Jobs">
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "job"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -358,7 +358,7 @@ const Layout = ({ children }: any) => {
         <Tooltip content="Bookmarks">
           {/* Bookmark */}
           <div
-            className={`w-[30px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
+            className={`w-[20px] border-white mycenter p-[4px] rounded-[6px]  cursor-pointer ${
               tab === "bookmark"
                 ? "bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
                 : "hover:bg-gradient-to-r  from-cyan-500 from-10% via-blue-500 via-30% to-black-500 to-90%"
@@ -391,15 +391,16 @@ const Layout = ({ children }: any) => {
         } `}
       >
         {/* Header */}
-        <div className="h-[50px] w-full flex items-center justify-between bg-grey px-[12px] bdr-b">
+        <div className="h-[50px] w-full flex items-center justify-between bg-grey bdr-b">
           <img
             src="https://res.cloudinary.com/ddlhk5yje/image/upload/v1683317102/showwcasexs/showwcaseXS_efwweq.png"
             alt="ShowwcaseXS header logo"
-            className="w-[40px] h-[40px]"
+            className="w-[40px] h-[40px] pl-[12px]"
           />
 
           <Tooltip content="Logout">
-            <button
+            <p
+              className="pr-[12px]"
               onClick={() => {
                 localStorage.setItem("sxs_key", "");
                 if (!logout) {
@@ -424,7 +425,7 @@ const Layout = ({ children }: any) => {
                 <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
                 <path d="M7 12h14l-3 -3m0 6l3 -3" />
               </svg>
-            </button>
+            </p>
           </Tooltip>
         </div>
         <SideBarStatusContext.Provider value={open}>
@@ -438,7 +439,7 @@ const Layout = ({ children }: any) => {
         {/* footer */}
         {open && (
           <div
-            className={`h-[30px] w-full text-white mycenter bg-grey px-[12px] bdr-t bdr-l absolute bottom-0 right-0 bg-black `}
+            className={`h-[30px] w-[376px] text-white mycenter bg-grey px-[12px] bdr-t bdr-l absolute bottom-0 right-0 bg-black `}
           >
             <small className="text-[11px]">
               Made with &lt; 🧠 /&gt; by{" "}

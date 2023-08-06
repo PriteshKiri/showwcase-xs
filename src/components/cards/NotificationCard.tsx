@@ -37,10 +37,10 @@ const NotificationCard = ({ props }: any) => {
           <div className="bdr-all p-[8px] bg-[#1a1a1b]  rounded-[6px] w-full flex flex-col">
             <div className="p-[12px]">
               {type === "new_thread_upvote" ? (
-                <p className=" text-[12px] flex items-center flex-wrap">
+                <p className=" text-[12px] flex items-center flex-wrap m-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-heart bg-[#502323] rounded-full p-[3px] w-[18px] h-[18px] "
+                    className="icon icon-tabler icon-tabler-heart bg-[#502323] rounded-full p-[3px] w-[12px] h-[12px] "
                     width="12"
                     height="12"
                     viewBox="0 0 24 24"
@@ -72,10 +72,10 @@ const NotificationCard = ({ props }: any) => {
                   </a>
                 </p>
               ) : type === "thread_boost" ? (
-                <p className="text-[12px] flex items-center flex-wrap">
+                <p className="text-[12px] flex items-center flex-wrap m-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-arrow-up-circle bg-[#103721] rounded-full p-[3px] w-[18px] h-[18px] "
+                    className="icon icon-tabler icon-tabler-arrow-up-circle bg-[#103721] rounded-full p-[3px] w-[12px] h-[12px] "
                     width="12"
                     height="12"
                     viewBox="0 0 24 24"
@@ -110,10 +110,10 @@ const NotificationCard = ({ props }: any) => {
                   </a>
                 </p>
               ) : type === "new_reply" ? (
-                <p className="text-[12px] flex items-center flex-wrap">
+                <p className="text-[12px] flex items-center flex-wrap m-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[3px] w-[18px] h-[18px] "
+                    className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[3px] w-[12px] h-[12px] "
                     width="12"
                     height="12"
                     viewBox="0 0 24 24"
@@ -148,10 +148,10 @@ const NotificationCard = ({ props }: any) => {
                   </a>
                 </p>
               ) : type === "new_follower" ? (
-                <p className="text-[12px] flex items-center flex-wrap">
+                <p className="text-[12px] flex items-center flex-wrap m-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[3px] w-[18px] h-[18px] "
+                    className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[3px] w-[12px] h-[12px] "
                     width="12"
                     height="12"
                     viewBox="0 0 24 24"
@@ -185,12 +185,12 @@ const NotificationCard = ({ props }: any) => {
             {type !== "new_follower" && (
               <div className="bdr-t px-[15px]">
                 {type === "new_reply" && data?.reply?.message && (
-                  <p className="pb-[8px] pt-[12px] text-[12px]">
+                  <p className="pb-[8px] pt-[12px] text-[12px] m-0">
                     {data?.reply?.message}
                   </p>
                 )}
                 {type === "new_reply" && data?.reply?.title && (
-                  <p className="pb-[7px] pt-[12px] text-[12px]">
+                  <p className="pb-[7px] pt-[12px] text-[12px] m-0">
                     {data?.reply?.title}
                   </p>
                 )}
@@ -218,7 +218,7 @@ const NotificationCard = ({ props }: any) => {
                   }`}
                 >
                   {data?.thread?.title && (
-                    <p className=" pb-[7px] pt-[12px] text-[12px]">
+                    <p className=" pb-[7px] pt-[12px] text-[12px] m-0">
                       {data?.thread?.title}
                     </p>
                   )}{" "}

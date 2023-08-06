@@ -172,7 +172,7 @@ const ProfileLayout = () => {
                   alt="User profile"
                 />
                 {/* Basic details */}
-                <div className="w-full flex justify-between items-center mt-[10px]">
+                <div className="w-full flex justify-between items-center mt-[15px]">
                   <p className="text-[14px]">@{userDetails?.username || "-"}</p>
                   <p className="text-[14px]">{userDetails?.location || "-"}</p>
                   <a
@@ -186,11 +186,11 @@ const ProfileLayout = () => {
                 </div>
 
                 {/* Headline */}
-                <p className="text-center !text-[#4595d0] text-[14px]">
+                <p className="text-center !text-[#4595d0] text-[14px] py-[12px]">
                   {userDetails?.headline || "-"}
                 </p>
                 {/* Stat box */}
-                <div className="w-full py-[10px] px-[40px] bdr-all bg-[#1a1a1b] flex flex-col items-center rounded-[6px] mt-[15px]">
+                <div className="w-[75%] py-[10px] px-[40px] bdr-all bg-[#1a1a1b] flex flex-col items-center rounded-[6px] mt-[15px]">
                   <div className="w-full flex justify-between py-[10px]">
                     <p className="text-[12px]">
                       <span className="font-bold text-[14px]">
@@ -225,7 +225,7 @@ const ProfileLayout = () => {
                 {/* Experties */}
                 {userDetails?.tags && (
                   <div className="flex flex-col w-full mt-[20px]">
-                    <p className="!text-[#999] text-[16px] font-bold text-left pb-[10px] bdr-b">
+                    <p className="!text-[#999] text-[16px] font-bold text-left pb-[10px] bdr-b m-0">
                       Expertise
                     </p>
                     <div className="w-full flex flex-wrap gap-y-[15px] py-[15px]">
