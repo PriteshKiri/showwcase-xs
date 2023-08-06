@@ -43,12 +43,12 @@ const ShowCard = ({ props, showSnackbar, setShowView, setShowID }: any) => {
               href={`https://www.showwcase.com/${props?.user?.username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
+              className="no-underline text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
             >
               {props?.user?.displayName}
             </a>
             {props?.readingStats && (
-              <p className="text-[12px] !text-slate-400">{`${props?.readingStats?.text}`}</p>
+              <p className="text-[12px] !text-slate-400 pt-[5px]">{`${props?.readingStats?.text}`}</p>
             )}
           </div>
         </div>
@@ -56,7 +56,7 @@ const ShowCard = ({ props, showSnackbar, setShowView, setShowID }: any) => {
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-user bg-[#23545e] rounded-full p-[3px] w-[18px] h-[18px] "
+            className="icon icon-tabler icon-tabler-user bg-[#23545e] rounded-full p-[3px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"
@@ -78,14 +78,14 @@ const ShowCard = ({ props, showSnackbar, setShowView, setShowID }: any) => {
           {props?.title}
         </p>
         {props?.projectSummary ? (
-          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px]">
+          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px] leading-[15px]">
             <ReactMarkdown
               children={props?.projectSummary}
               remarkPlugins={[remarkGfm]}
             />
           </p>
         ) : props?.seo?.description ? (
-          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px]">
+          <p className="text-left text-[10px] p-[10px] mb-[15px] bdr-all rounded-[6px] leading-[15px]">
             <ReactMarkdown
               children={props?.seo?.description}
               remarkPlugins={[remarkGfm]}
@@ -95,18 +95,18 @@ const ShowCard = ({ props, showSnackbar, setShowView, setShowID }: any) => {
           ""
         )}
 
-        <div className="flex justify-start items-center  my-[5px]">
+        <div className="flex justify-start items-center mt-[15px]  mb-[5px]">
           <div className="m-[0px]">
             <button
               onClick={() => handleShowRead(props?.id)}
-              className=" no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
+              className="border-none cursor-pointer bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
             >
               Read now
             </button>
           </div>
 
           <button
-            className=" m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
+            className="border-none cursor-pointer m-[0px] ml-[10px] no-underline bg-[#4595d0] m-[0px] py-[8px] px-[12px] rounded-[6px] text-[12px] py-[8px] text-white visited:text-white hover:bg-[#366588]"
             onClick={handleClick}
           >
             Share

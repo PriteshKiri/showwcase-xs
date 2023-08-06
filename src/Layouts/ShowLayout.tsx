@@ -74,7 +74,7 @@ const ShowLayout = () => {
 
             <a
               href={`https://www.showwcase.com/show/${showId}/${showContent?.slug}`}
-              className="p-[4px] bdr-all rounded-[6px]"
+              className="p-[4px] bdr-all rounded-[6px] mycenter"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -119,12 +119,12 @@ const ShowLayout = () => {
                   href={`https://www.showwcase.com/${showContent?.user?.username}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
+                  className="no-underline text-[14px] !text-white !visited:text-white  ml-0 hover:underline"
                 >
                   {showContent?.user?.displayName}
                 </a>
                 {showContent?.readingStats && (
-                  <p className="text-[12px] !text-slate-400">{`${showContent?.readingStats?.text}`}</p>
+                  <p className="text-[12px] !text-slate-400 pt-[5px]">{`${showContent?.readingStats?.text}`}</p>
                 )}
               </div>
             </div>
@@ -169,7 +169,7 @@ const ShowLayout = () => {
             )}
             <div className="w-full flex justify-between items-center pt-[15px]">
               {showContent?.category && (
-                <div className="py-[5px] px-[12px] rounded-[6px] bg-[#289ddfc9] capitalize text-[#e4e4e4] text-[12px]">
+                <div className="py-[10px] px-[12px] rounded-[6px] bg-[#289ddfc9] capitalize text-[#e4e4e4] text-[12px]">
                   {showContent?.category}
                 </div>
               )}{" "}
