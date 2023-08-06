@@ -114,9 +114,9 @@ const WriteThread = () => {
         />
       )}
 
-      <div className="p-[15px] bdr-all rounded-[6px]">
+      <div className="p-[15px] bdr-all rounded-[6px] flex flex-col">
         <input
-          className="shadow-sm mb-[15px] !border-[1px] !outline-0 !border-gray-500 !text-gray-900 rounded-[8px] block w-full p-2.5 !bg-gray-700 !placeholder:gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
+          className="shadow-sm mb-[15px] !border-[1px] !font-mono !outline-0 !border-gray-500 !text-gray-900 border-solid rounded-[8px] block p-2.5 !bg-gray-700 !placeholder:gray-400 !text-white !text-[12px] focus:!ring-blue-500 focus:!border-blue-500 w-[315px]"
           placeholder="Write title for your thread (optional)"
           value={title}
           onChange={(e) => {
@@ -129,7 +129,7 @@ const WriteThread = () => {
           rows={15}
           ref={inputRef}
           required
-          className=" block !p-[10px] !min-h-[300px] w-full !outline-0  !bg-gray-700 !rounded-[8px] !border-[1px] !border-gray-500  !placeholder:gray-400 !text-white !text-[14px] focus:!ring-blue-500 focus:!border-blue-500"
+          className=" block !p-[10px] !font-mono !min-h-[300px] !min-w-[315px] !max-w-[316px]  !outline-0  !bg-gray-700 !rounded-[8px] !border-[1px] border-solid !border-gray-500  !placeholder:gray-400 !text-white !text-[12px] focus:!ring-blue-500 focus:!border-blue-500 "
           placeholder="Write thread..."
           onChange={(e) => {
             setIsVoiceTypingEnabled(false);
@@ -146,7 +146,7 @@ const WriteThread = () => {
               ? "bg-[#4595d0] hover:bg-[#366588] "
               : "bg-gray-700"
           }
-          py-[8px] px-[20px] rounded-[6px] cursor-pointer text-[14px] text-white `}
+          py-[8px] px-[20px] rounded-[6px] cursor-pointer text-[14px] text-white border-none`}
           onClick={() => {
             setPost(true);
           }}
@@ -161,7 +161,7 @@ const WriteThread = () => {
 
         <button
           className={`
-          py-[8px] px-[9px] rounded-[50%] cursor-pointer ${
+          py-[8px] px-[9px] rounded-[50%]  mycenter border-none cursor-pointer ${
             isVoiceTypingEnabled
               ? "bg-[#4595d0] hover:bg-[#366588]"
               : "bg-gray-700"

@@ -14,8 +14,8 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
   }
 
   return (
-    <div className="bdr-all w-[95%] bg-[#1a1a1b] my-[8px] px-[8px]">
-      <div className="top w-full flex justify-between items-center py-[10px] px-[8px] bdr-b">
+    <div className="bdr-all w-[90%] bg-[#1a1a1b] my-[8px] px-[8px]">
+      <div className="top w-full flex justify-between items-center py-[10px] bdr-b">
         <div className="flex items-center gap-[8px]">
           {!imgErr && props?.user?.profilePictureUrl ? (
             <img
@@ -37,18 +37,18 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
           <div>
             <a
               href={`https://www.showwcase.com/${props?.user?.username}`}
-              className="text-[14px] text-white m-0 visited:text-white hover:underline"
+              className="text-[14px] no-underline text-white m-0 visited:text-white hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               {props?.user?.displayName}
             </a>
-            <p className="text-[12px] !text-slate-400">{`@${props?.user?.username}`}</p>
+            <p className="text-[12px] !text-slate-400 pt-[5px]">{`@${props?.user?.username}`}</p>
           </div>
         </div>
         <a
           href={`https://www.showwcase.com/thread/${props?.id}`}
-          className="p-[4px] bdr-all rounded-[6px]"
+          className="p-[4px] bdr-all rounded-[6px] mycenter"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -94,7 +94,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
 
         {props?.linkPreviewMeta !== "null" &&
         props?.linkPreviewMeta?.type === "external" ? (
-          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-full flex flex-col  justify-center items-center">
+          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-auto flex flex-col  justify-center items-center">
             {props?.linkPreviewMeta.images && (
               <img
                 className="w-full rounded-[6px]"
@@ -129,7 +129,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
           </div>
         ) : props?.linkPreviewMeta !== "null" &&
           props?.linkPreviewMeta?.type === "project" ? (
-          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-full flex flex-col  justify-center items-center">
+          <div className="p-[5px] mx-[2px] my-[15px] bdr-all  rounded-[6px]  w-auto flex flex-col  justify-center items-center">
             {props?.linkPreviewMeta?.project?.coverImage && (
               <img
                 className="w-full rounded-[6px]"
@@ -162,7 +162,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         <div className="flex gap-x-[6px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-heart bg-[#502323] rounded-full p-[2px] w-[16px] h-[16px] "
+            className="icon icon-tabler icon-tabler-heart bg-[#502323] rounded-full p-[2px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"
@@ -181,7 +181,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         <div className="flex gap-x-[6px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-up-circle bg-[#103721] rounded-full p-[2px] w-[16px] h-[16px] "
+            className="icon icon-tabler icon-tabler-arrow-up-circle bg-[#103721] rounded-full p-[2px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"
@@ -203,7 +203,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         <div className="flex gap-x-[6px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[2px] w-[16px] h-[16px] "
+            className="icon icon-tabler icon-tabler-message-circle-2 bg-[#5a4814a8] rounded-full p-[2px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"
@@ -228,7 +228,7 @@ const ThreadCard = ({ props, showSnackbar }: any) => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[2px] w-[16px] h-[16px] "
+            className="icon icon-tabler icon-tabler-user bg-[#1e3b57] rounded-full p-[2px] w-[12px] h-[12px] "
             width="12"
             height="12"
             viewBox="0 0 24 24"

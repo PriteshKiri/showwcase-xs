@@ -68,7 +68,7 @@
   font-size: 12px;
   margin: 15px 5px;
   word-break: break-word;
-  margin: 0px;
+  line-height: 18px;
 }
 
 .thread-content ul {
